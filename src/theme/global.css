@@ -5,7 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: ProximaNova, Roboto, sans-serif;
-  background-color: var(--palette-common-grey-25);
+  background-color: var(--palette-common-grey-50);
   scroll-behavior: smooth;
 }
 

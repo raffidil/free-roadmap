@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+}
+
+.gridContainer {
+  min-height: calc(100vh - var(--mixins-toolbar-minHeight) - 24px);
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+}
