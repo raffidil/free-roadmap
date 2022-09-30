@@ -15,8 +15,10 @@ model Lesson {
   name        String?
   description String
   resources   Resource[]
+  exercises   Exercise[]
   course      Course     @relation(fields: [courseId], references: [id])
   courseId    Int
+  weekNo      Int
 }
 
 model Resource {
@@ -29,10 +31,20 @@ model Resource {
   courses     Course[]
 }
 
+model Exercise {
+  id          Int      @id @default(autoincrement())
+  type        String   @default("url")
+  url         String
+  label       String
+  description String?
+  lessons     Lesson[]
+}
+
 model Course {
   id          Int        @id @default(autoincrement())
   name        String?
   description String
   lessons     Lesson[]
   resources   Resource[]
+  color       String?
 }

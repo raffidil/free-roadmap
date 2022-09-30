@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:init": "npx prisma migrate dev --name init",
+    "db:init": "rm -rf node_modules/.prisma/client prisma/migrations node_modules/@prisma/client prisma/dev.db && npx prisma migrate dev --name init",
     "db:populate": "npx prisma migrate reset -f && npx ts-node prisma/populate.ts"
   },
   "dependencies": {

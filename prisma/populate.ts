@@ -9,6 +9,7 @@ async function main() {
       description: "",
       lessons: {
         create: {
+          weekNo: 1,
           name: "Intro",
           description: "",
         },
