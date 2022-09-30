@@ -1,5 +1,7 @@
-import { Card, Typography } from "@mui/material";
+import { Card, Grid, Typography } from "@mui/material";
 import styles from "./WeekColumn.module.scss";
+import CourseCard from "../CourseCard";
+import { Week } from "../../types/types";
 
 const pad = (input: number) => {
   let stringInput = input.toString();
@@ -7,14 +9,21 @@ const pad = (input: number) => {
   return stringInput;
 };
 
-const WeekColumn: React.FC<{ weekNumber?: number }> = ({ weekNumber }) => {
+const WeekColumn: React.FC<{ week: Week }> = ({ week }) => {
+  const courses = week.courses;
   return (
     <>
       <Typography className={styles.title} variant="h6">
-        Week {pad(weekNumber || 0)}
+        Week {pad(week.id || 0)}
       </Typography>
       <Card className={styles.card} elevation={0}>
-        week card
+        <Grid container rowGap="16px">
+          {courses?.map((course) => (
+            <Grid item key={course.id} xs={12}>
+              <CourseCard course={course} />
+            </Grid>
+          ))}
+        </Grid>
       </Card>
     </>
   );
