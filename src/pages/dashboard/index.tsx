@@ -4,8 +4,21 @@ import WeekColumn from "../../components/WeekColumn";
 import theme from "../../theme/theme";
 import { Week } from "../../types/types";
 import styles from "./index.module.scss";
+import { PrismaClient, Prisma } from "@prisma/client";
 
-const Dashboard: NextPage = () => {
+const prisma = new PrismaClient();
+
+type Course = Prisma.CourseGetPayload<{
+  include: {
+    lessons: true;
+    resources: true;
+    _count: true;
+  };
+}>;
+
+const Dashboard: NextPage<{ courses: Array<Course> }> = ({ courses }) => {
+  console.log({ courses });
+
   const weeksPerView = 4;
   const weekMdSize = 12 / weeksPerView;
   const weeks: Array<Week> = [
@@ -81,5 +94,15 @@ const Dashboard: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const courses = await prisma.course.findMany({
+    include: { _count: true, lessons: true, resources: true },
+  });
+
+  return {
+    props: { courses },
+  };
+}
 
 export default Dashboard;
