@@ -12,13 +12,16 @@ import styles from "./CourseCard.module.scss";
 
 const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
   return (
-    <Card className={styles.root} style={{ backgroundColor: course.color }}>
+    <Card
+      className={styles.root}
+      style={{ backgroundColor: course?.data?.color }}
+    >
       <Typography color="text.secondary" className={styles.title}>
         {course.name}
       </Typography>
       <Divider />
       <List>
-        {course.lessons.map((lesson) => (
+        {course.lessons?.map((lesson) => (
           <ListItem disablePadding key={lesson.id}>
             <ListItemButton>
               <ListItemText primary={lesson.name} />
