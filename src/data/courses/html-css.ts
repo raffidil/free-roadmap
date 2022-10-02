@@ -1,5 +1,4 @@
-import theme from "../../theme/theme";
-import { Course, Lesson, Resource } from "../../types/types";
+import { Course } from "../../types/types";
 import tags from "../tags";
 
 const databaseCourse: Course = {
@@ -7,9 +6,7 @@ const databaseCourse: Course = {
   name: "HTML/CSS",
   description: "Basic HTML/CSS",
   tag: [tags.frontend],
-  data: {
-    color: theme.palette.common.green.light,
-  },
+  color: "lightGreen",
   lessons: [
     {
       id: "intro",

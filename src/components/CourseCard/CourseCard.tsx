@@ -1,4 +1,4 @@
-import { useDialog } from "@/hooks";
+import { useColors, useDialog } from "@/hooks";
 import {
   Card,
   Divider,
@@ -8,42 +8,51 @@ import {
   ListItemText,
 } from "@mui/material";
 import { Course } from "../../types/types";
-import CourseDialog from "../CourseDialog";
 import styles from "./CourseCard.module.scss";
+import LaunchIcon from "@mui/icons-material/Launch";
+import { TopLevelDialogNames } from "../TopLevelDialogs";
 
 const CourseCard: React.FC<{ course: Course; weekNo?: number }> = ({
   course,
   weekNo,
 }) => {
-  const {
-    openDialog: openCourseDialog,
-    isOpen: isCourseDialogOpen,
-    onClose: onDialogClose,
-  } = useDialog("course");
+  const { openDialog: openCourseDialog } = useDialog(
+    TopLevelDialogNames.Course
+  );
+  const colors = useColors();
   return (
-    <Card className={styles.root}>
+    <Card
+      className={styles.root}
+      style={{
+        backgroundColor: course.color ? colors?.[course.color]?.[50] : "unset",
+      }}
+    >
       <List>
         <ListItem
           disablePadding
-          style={{ backgroundColor: course?.data?.color }}
+          style={{
+            backgroundColor: course.color
+              ? colors?.[course.color]?.[900]
+              : "unset",
+          }}
         >
-          <ListItemButton>
-            <ListItemText primary={course.name} />
+          <ListItemButton
+            onClick={() => openCourseDialog({ course: course.id })}
+          >
+            <ListItemText
+              primary={course.name}
+              primaryTypographyProps={{ color: "white" }}
+            />
+            <LaunchIcon htmlColor="white" />
           </ListItemButton>
         </ListItem>
-        <Divider />
+        <Divider className={styles.divider} />
         {course.lessons?.map((lesson) => (
           <ListItem key={lesson.id} className={styles.listItem}>
-            <ListItemText
-              primary={lesson.name}
-              primaryTypographyProps={{ color: "text.secondary" }}
-            />
+            <ListItemText primary={lesson.name} />
           </ListItem>
         ))}
       </List>
-      {isCourseDialogOpen && (
-        <CourseDialog onClose={onDialogClose} course={course} weekNo={weekNo} />
-      )}
     </Card>
   );
 };

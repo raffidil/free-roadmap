@@ -1,3 +1,5 @@
+import { Color } from "@/hooks/useColors";
+
 export type Tag = {
   label: string;
   color: string;
@@ -28,5 +30,6 @@ export type Course = {
   lessons?: Array<Lesson>;
   tag?: Array<Tag>;
   resources?: Array<Resource>;
+  color?: Color;
   data?: { [key: string]: any };
 };

@@ -7,9 +7,7 @@ const javascriptCourse: Course = {
   name: "Javascript",
   description: "Basic Javascript",
   tag: [tags.frontend],
-  data: {
-    color: theme.palette.common.blue.light,
-  },
+  color: "blue",
   resources: [
     {
       id: "freecodecamp",
@@ -41,17 +39,22 @@ const javascriptCourse: Course = {
     },
     {
       id: "devtool",
-      name: "Using Chrome/Firefox development tool Javascript console",
+      name: "Developer tools",
+      description: "Using Chrome/Firefox developer tool Javascript console",
       weekNo: 2,
     },
     {
       id: "math",
-      name: "Numbers and math (add, subtract, multiply, divide, remainder) and concept of statement",
+      name: "Numbers and math",
+      description:
+        "Numbers and math (add, subtract, multiply, divide, remainder) and concept of statement",
       weekNo: 2,
     },
     {
       id: "variables",
-      name: "Variables and concepts of keyword, assignment, declaration, environment, being undefined, case sensitivity and camel case",
+      name: "Variables",
+      description:
+        "Variables and concepts of keyword, assignment, declaration, environment, being undefined, case sensitivity and camel case",
       weekNo: 2,
     },
     {
@@ -86,7 +89,8 @@ const javascriptCourse: Course = {
     },
     {
       id: "functions",
-      name: "Functions (syntax, arguments, scope, return value)",
+      name: "Functions",
+      description: "Syntax, arguments, scope and return value",
       weekNo: 3,
       resources: [
         {
@@ -109,7 +113,9 @@ const javascriptCourse: Course = {
     },
     {
       id: "boolean",
-      name: "Boolean and logical comparators and “if” (equal, strict equal, less than, greater than, and, or)",
+      name: "Boolean",
+      description:
+        "Boolean and logical comparators and “if” (equal, strict equal, less than, greater than, and, or)",
       weekNo: 3,
       resources: [
         {

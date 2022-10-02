@@ -1,3 +1,4 @@
+import { TopLevelDialogNames } from "@/components/TopLevelDialogs";
 import { useRouter } from "next/router";
 
 const useDialog = (dialogName?: string) => {
@@ -26,7 +27,15 @@ const useDialog = (dialogName?: string) => {
     );
   };
 
-  return { onClose, openDialog, isOpen, query };
+  const openTopLevelDialog = (topLevelDialogName: TopLevelDialogNames) => {
+    if (!topLevelDialogName) return;
+    push({
+      pathname,
+      query: { ...query, dialog: topLevelDialogName },
+    });
+  };
+
+  return { onClose, openDialog, openTopLevelDialog, isOpen, query };
 };
 
 export default useDialog;
