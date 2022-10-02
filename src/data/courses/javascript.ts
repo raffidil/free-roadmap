@@ -1,4 +1,3 @@
-import theme from "../../theme/theme";
 import { Course } from "../../types/types";
 import tags from "../tags";
 
@@ -6,7 +5,7 @@ const javascriptCourse: Course = {
   id: "javascript",
   name: "Javascript",
   description: "Basic Javascript",
-  tag: [tags.frontend],
+  tag: [tags.frontend, tags.programming],
   color: "blue",
   resources: [
     {

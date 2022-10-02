@@ -1,0 +1,32 @@
+.dialogPaper {
+  min-width: 80vw;
+  @media (--viewport-md) {
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    max-height: unset;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+.overview {
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  .title {
+    margin: 12px 0px;
+  }
+  .tagContainer {
+    margin-top: 16px;
+  }
+  .chipsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

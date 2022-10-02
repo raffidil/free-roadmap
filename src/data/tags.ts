@@ -1,6 +1,7 @@
+import { Color } from "@/hooks/useColors";
 import { Tag } from "../types/types";
 
-const tags = {
+const tags: { [key: string]: { label: string; color: Color } } = {
   frontend: {
     label: "Frontend",
     color: "blue",
@@ -12,6 +13,10 @@ const tags = {
   uiux: {
     label: "UI/UX",
     color: "green",
+  },
+  programming: {
+    label: "Programming",
+    color: "lightGreen",
   },
 };
 

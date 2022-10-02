@@ -37,7 +37,7 @@ const CourseCard: React.FC<{ course: Course; weekNo?: number }> = ({
           }}
         >
           <ListItemButton
-            onClick={() => openCourseDialog({ course: course.id })}
+            onClick={() => openCourseDialog({ course: course.id, weekNo })}
           >
             <ListItemText
               primary={course.name}

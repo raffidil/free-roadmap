@@ -2,7 +2,7 @@ import { Color } from "@/hooks/useColors";
 
 export type Tag = {
   label: string;
-  color: string;
+  color: Color;
 };
 
 export type Lesson = {
