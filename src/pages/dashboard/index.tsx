@@ -1,16 +1,16 @@
-import { useEffect, useRef, useState } from "react";
-import { Button, Grid, IconButton } from "@mui/material";
+import { useState } from "react";
+import { IconButton } from "@mui/material";
 import { NextPage } from "next";
 import WeekColumn from "../../components/WeekColumn";
 import styles from "./index.module.scss";
 import { courses } from "../../data";
 import max from "lodash/max";
 import { Course } from "../../types/types";
-import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide, SwiperProps } from "swiper/react";
 import SwiperType from "swiper/types/swiper-class";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import useResponsive from "@/hooks/useResponsive";
 
 const useUpdater = () => {
   const [value, setValue] = useState(false);
@@ -25,6 +25,8 @@ const Dashboard: NextPage<{
 }> = ({ weeks }) => {
   const [swiperObj, setSwiperObj] = useState<SwiperType | undefined>(undefined);
   const update = useUpdater();
+  const { isMobile } = useResponsive();
+
   const breakpoints: SwiperProps["breakpoints"] = {
     1200: { slidesPerView: 4 },
     900: { slidesPerView: 3 },
@@ -61,11 +63,8 @@ const Dashboard: NextPage<{
         className={styles.swiperRoot}
         spaceBetween={16}
         breakpoints={breakpoints}
-        modules={[Navigation, Pagination]}
         onSlideChange={onSlideChange}
         onSwiper={onSwiper}
-        pagination={{ clickable: true }}
-        onNavigationNext={() => console.log("navigation")}
       >
         {weeks.map((week, i) => (
           <SwiperSlide key={week.weekNo}>

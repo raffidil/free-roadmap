@@ -14,7 +14,7 @@ const WeekColumn: React.FC<{
   weekNo: number;
 }> = ({ courses, weekNo }) => {
   return (
-    <>
+    <div className={styles.container}>
       <Typography className={styles.title} variant="h6">
         Week {pad(weekNo || 0)}
       </Typography>
@@ -23,13 +23,13 @@ const WeekColumn: React.FC<{
           {courses?.map((course) =>
             course ? (
               <Grid item key={course.id} xs={12}>
-                <CourseCard course={course} />
+                <CourseCard course={course} weekNo={weekNo} />
               </Grid>
             ) : null
           )}
         </Grid>
       </Card>
-    </>
+    </div>
   );
 };
 

@@ -1,3 +1,4 @@
+import { useDialog } from "@/hooks";
 import {
   Card,
   Divider,
@@ -5,30 +6,44 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  Typography,
 } from "@mui/material";
 import { Course } from "../../types/types";
+import CourseDialog from "../CourseDialog";
 import styles from "./CourseCard.module.scss";
 
-const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
+const CourseCard: React.FC<{ course: Course; weekNo?: number }> = ({
+  course,
+  weekNo,
+}) => {
+  const {
+    openDialog: openCourseDialog,
+    isOpen: isCourseDialogOpen,
+    onClose: onDialogClose,
+  } = useDialog("course");
   return (
-    <Card
-      className={styles.root}
-      style={{ backgroundColor: course?.data?.color }}
-    >
-      <Typography color="text.secondary" className={styles.title}>
-        {course.name}
-      </Typography>
-      <Divider />
+    <Card className={styles.root}>
       <List>
+        <ListItem
+          disablePadding
+          style={{ backgroundColor: course?.data?.color }}
+        >
+          <ListItemButton>
+            <ListItemText primary={course.name} />
+          </ListItemButton>
+        </ListItem>
+        <Divider />
         {course.lessons?.map((lesson) => (
-          <ListItem disablePadding key={lesson.id}>
-            <ListItemButton>
-              <ListItemText primary={lesson.name} />
-            </ListItemButton>
+          <ListItem key={lesson.id} className={styles.listItem}>
+            <ListItemText
+              primary={lesson.name}
+              primaryTypographyProps={{ color: "text.secondary" }}
+            />
           </ListItem>
         ))}
       </List>
+      {isCourseDialogOpen && (
+        <CourseDialog onClose={onDialogClose} course={course} weekNo={weekNo} />
+      )}
     </Card>
   );
 };
