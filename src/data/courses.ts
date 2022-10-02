@@ -1,7 +1,7 @@
 import { Course } from "../types/types";
-import databaseCourse from "./courses/database";
+import htmlCss from "./courses/html-css";
 import javascriptCourse from "./courses/javascript";
 
-const courses: Array<Course> = [{ ...javascriptCourse }, { ...databaseCourse }];
+const courses: Array<Course> = [{ ...javascriptCourse }, { ...htmlCss }];
 
 export default courses;

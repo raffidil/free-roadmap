@@ -1,7 +1,7 @@
 import { Tag } from "../types/types";
 
 const tags = {
-  forntend: {
+  frontend: {
     label: "Frontend",
     color: "blue",
   },

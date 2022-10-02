@@ -16,7 +16,7 @@ export type Resource = {
   id: string;
   label: string;
   description?: string;
-  type: "link" | "file";
+  type: "link" | "file" | "video";
   url: string;
   tag?: Array<Tag>;
 };
