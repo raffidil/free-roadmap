@@ -1,10 +1,21 @@
-import { Grid } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
+import { Button, Grid, IconButton } from "@mui/material";
 import { NextPage } from "next";
 import WeekColumn from "../../components/WeekColumn";
 import styles from "./index.module.scss";
 import { courses } from "../../data";
 import max from "lodash/max";
 import { Course } from "../../types/types";
+import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide, SwiperProps } from "swiper/react";
+import SwiperType from "swiper/types/swiper-class";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+
+const useUpdater = () => {
+  const [value, setValue] = useState(false);
+  return () => setValue((v) => !v);
+};
 
 const Dashboard: NextPage<{
   weeks: {
@@ -12,20 +23,59 @@ const Dashboard: NextPage<{
     courses: (Course | null)[];
   }[];
 }> = ({ weeks }) => {
-  const weeksPerView = 4;
-  const weekMdSize = 12 / weeksPerView;
+  const [swiperObj, setSwiperObj] = useState<SwiperType | undefined>(undefined);
+  const update = useUpdater();
+  const breakpoints: SwiperProps["breakpoints"] = {
+    1200: { slidesPerView: 4 },
+    900: { slidesPerView: 3 },
+    600: { slidesPerView: 2 },
+    0: { slidesPerView: 1 },
+  };
+
+  const onSwiperNext = () => {
+    swiperObj?.slideNext();
+  };
+
+  const onSwiperPrev = () => {
+    swiperObj?.slidePrev();
+  };
+
+  const onSlideChange = (s: SwiperType) => {
+    setSwiperObj(Object(s));
+    update();
+  };
+
+  const onSwiper = (s: SwiperType) => {
+    setSwiperObj(Object(s));
+    update();
+  };
 
   return (
     <div className={styles.container}>
-      <Grid container spacing="16px" className={styles.gridContainer}>
-        {weeks
-          .filter((_, index) => index < weeksPerView)
-          .map((week, i) => (
-            <Grid item md={weekMdSize} className={styles.gridItem} key={i}>
-              <WeekColumn courses={week.courses} weekNo={week.weekNo} />
-            </Grid>
-          ))}
-      </Grid>
+      <IconButton onClick={onSwiperPrev} disabled={swiperObj?.isBeginning}>
+        <ArrowBackIosNewIcon />
+      </IconButton>
+      <Swiper
+        observer
+        observeParents
+        className={styles.swiperRoot}
+        spaceBetween={16}
+        breakpoints={breakpoints}
+        modules={[Navigation, Pagination]}
+        onSlideChange={onSlideChange}
+        onSwiper={onSwiper}
+        pagination={{ clickable: true }}
+        onNavigationNext={() => console.log("navigation")}
+      >
+        {weeks.map((week, i) => (
+          <SwiperSlide key={week.weekNo}>
+            <WeekColumn courses={week.courses} weekNo={week.weekNo} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <IconButton onClick={onSwiperNext} disabled={swiperObj?.isEnd}>
+        <ArrowForwardIosIcon />
+      </IconButton>
     </div>
   );
 };

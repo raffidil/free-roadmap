@@ -4,7 +4,7 @@ import styles from "./Layout.module.scss";
 
 const Layout: React.FC<{ children?: any }> = ({ children }) => {
   return (
-    <Container fixed className={styles.container}>
+    <Container className={styles.container} maxWidth="lg">
       <Header />
       {children}
     </Container>

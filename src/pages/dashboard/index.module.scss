@@ -1,5 +1,7 @@
 .container {
   display: flex;
+  width: 100%;
+  align-items: center;
 }
 
 .gridContainer {
@@ -9,4 +11,17 @@
 .gridItem {
   display: flex;
   flex-direction: column;
+}
+
+.swiperRoot {
+  width: 100%;
+  :root {
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 0;
+      height: calc(100% + 32px);
+      width: 60px;
+      color: #000;
+    }
+  }
 }

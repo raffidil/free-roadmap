@@ -1,4 +1,6 @@
 .container {
   padding-top: calc(var(--mixins-toolbar-minHeight) + 24px);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

@@ -3,6 +3,10 @@ import type { AppProps } from "next/app";
 import Layout from "../components/Layout";
 import theme from "../theme/theme";
 import MuiComponentsConfig from "../theme/MuiComponentsConfig";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import { createTheme, ThemeProvider } from "@mui/material";
 
 const muiTheme = createTheme({
