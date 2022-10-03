@@ -1,5 +1,9 @@
 .dialogPaper {
   min-width: 80vw;
+  height: 80vh;
+  max-height: 1024px;
+  background-color: var(--palette-common-grey-25);
+
   @media (--viewport-md) {
     min-width: 100vw;
     width: 100vw;
@@ -28,5 +32,23 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+}
+
+.syllabus {
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  .weekTitle {
+    margin: 24px 0px 12px;
+  }
+  .title {
+    margin: 8px 0px 12px;
+  }
+  .resourceListItem {
+    padding-left: 8px;
+  }
+  .resourceListItemIcon {
+    min-width: 44px;
   }
 }

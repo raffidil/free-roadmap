@@ -17,6 +17,7 @@ import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
 import useResponsive from "@/hooks/useResponsive";
 import Overview from "./Overview";
+import Syllabus from "./Syllabus";
 
 const CourseDialog: React.FC<{
   onClose: () => void;
@@ -44,9 +45,6 @@ const CourseDialog: React.FC<{
         <IconButton className={styles.closeButton} onClick={() => onClose()}>
           <CloseIcon />
         </IconButton>
-      </DialogTitle>
-
-      <DialogContent>
         <Tabs
           value={tab}
           onChange={(e, value) => setTab(value)}
@@ -68,7 +66,11 @@ const CourseDialog: React.FC<{
             label="Syllabus"
           />
         </Tabs>
+      </DialogTitle>
+
+      <DialogContent>
         {tab === 0 && <Overview course={course} />}
+        {tab === 2 && <Syllabus course={course} />}
       </DialogContent>
     </Dialog>
   );
