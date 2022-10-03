@@ -4,19 +4,14 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Link,
-  List,
-  ListItem,
-  ListItemIcon,
+  Divider,
   Typography,
 } from "@mui/material";
 import { useState } from "react";
 import styles from "./CourseDialog.module.scss";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
-import PlayCircleOutlinedIcon from "@mui/icons-material/PlayCircleOutlined";
-import LinkOutlinedIcon from "@mui/icons-material/LinkOutlined";
 import max from "lodash/max";
+import ResourcesList from "../ResourcesList";
 
 const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
   const colors = useColors();
@@ -85,6 +80,9 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                     )}
                     {lesson.resources?.length && (
                       <>
+                        {lesson.description?.length && (
+                          <Divider className={styles.divider} />
+                        )}
                         <Typography
                           variant="body2"
                           color="text.secondary"
@@ -92,37 +90,7 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                         >
                           Resources
                         </Typography>
-                        <List dense>
-                          {lesson?.resources?.map((resource) => (
-                            <ListItem
-                              key={resource.url}
-                              className={styles.resourceListItem}
-                            >
-                              <ListItemIcon
-                                className={styles.resourceListItemIcon}
-                              >
-                                {resource.type === "file" && (
-                                  <DescriptionOutlinedIcon />
-                                )}
-                                {resource.type === "video" && (
-                                  <PlayCircleOutlinedIcon />
-                                )}
-                                {(!resource.type ||
-                                  resource.type === "link") && (
-                                  <LinkOutlinedIcon />
-                                )}
-                              </ListItemIcon>
-                              <Link
-                                rel="noopener"
-                                target="_blank"
-                                href={resource.url}
-                                underline="hover"
-                              >
-                                {resource?.label || resource.url}
-                              </Link>
-                            </ListItem>
-                          ))}
-                        </List>
+                        <ResourcesList resources={lesson?.resources} />
                       </>
                     )}
                   </AccordionDetails>

@@ -45,10 +45,19 @@
   .title {
     margin: 8px 0px 12px;
   }
-  .resourceListItem {
-    padding-left: 8px;
+  .divider {
+    margin: 16px 0px;
   }
-  .resourceListItemIcon {
-    min-width: 44px;
+}
+
+.resources {
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  .lessonTitle {
+    margin: 16px 0px 4px;
+  }
+  .divider {
+    margin: 16px 0px;
   }
 }

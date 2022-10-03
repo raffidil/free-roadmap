@@ -1,4 +1,3 @@
-import { Course } from "@/types/types";
 import {
   Dialog,
   DialogContent,
@@ -18,6 +17,7 @@ import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
 import useResponsive from "@/hooks/useResponsive";
 import Overview from "./Overview";
 import Syllabus from "./Syllabus";
+import Resources from "./Resources";
 
 const CourseDialog: React.FC<{
   onClose: () => void;
@@ -70,6 +70,7 @@ const CourseDialog: React.FC<{
 
       <DialogContent>
         {tab === 0 && <Overview course={course} />}
+        {tab === 1 && <Resources course={course} />}
         {tab === 2 && <Syllabus course={course} />}
       </DialogContent>
     </Dialog>
