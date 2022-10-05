@@ -56,6 +56,13 @@ const palette = {
     medium: "#00c700",
     darker: "#006e00",
   },
+  teal: {
+    lighter: "#e0f2f1",
+    light: "#4db6ac",
+    medium: "#00897b",
+    dark: "#00695c",
+    darker: "#004d40",
+  },
 };
 
 const mixins = {
@@ -83,15 +90,16 @@ module.exports = {
       vividMalachite: palette.vividMalachite,
       grey: palette.grey,
       neutral: palette.neutral,
+      teal: palette.teal,
     },
     primary: {
-      main: palette.blue.dark,
+      main: palette.teal.dark,
     },
     secondary: { main: palette.green.dark },
     error: { main: palette.red.medium },
     warning: { main: palette.orange.dark, contrastText: palette.neutral.white },
     success: {
-      main: palette.vividMalachite.dark,
+      main: palette.vividMalachite.medium,
     },
     info: { main: palette.grey[400] },
     text: {

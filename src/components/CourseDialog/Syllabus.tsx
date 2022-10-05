@@ -13,6 +13,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import max from "lodash/max";
 import ResourcesList from "../ResourcesList";
 import { useRouter } from "next/router";
+import theme from "../../theme/theme";
 
 const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
   const colors = useColors();
@@ -83,7 +84,9 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                     id="panel1bh-header"
                     sx={{
                       bgcolor:
-                        expanded === lesson.id ? colors.grey[300] : "unset",
+                        expanded === lesson.id
+                          ? theme.palette.common.grey["200"]
+                          : "unset",
                     }}
                   >
                     <Typography>{lesson.name}</Typography>

@@ -7,7 +7,7 @@ import { useEffect } from "react";
 const Home: NextPage = () => {
   const router = useRouter();
   useEffect(() => {
-    router.replace("/dashboard");
+    router.replace("/weeks");
   }, []);
   return <div></div>;
 };

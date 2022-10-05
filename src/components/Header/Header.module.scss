@@ -3,3 +3,24 @@
   width: 100%;
   margin: auto;
 }
+
+.drawerBox {
+  padding: 0px 0px 32px;
+  width: 70vw;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    background-color: var(--palette-primary-main);
+  }
+
+  .title {
+    padding: 0px 24px;
+    margin: 24px 0 16px;
+  }
+}
