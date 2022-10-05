@@ -7,15 +7,18 @@ import {
   Divider,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./CourseDialog.module.scss";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import max from "lodash/max";
 import ResourcesList from "../ResourcesList";
+import { useRouter } from "next/router";
 
 const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
   const colors = useColors();
+  const router = useRouter();
   const [expanded, setExpanded] = useState<string | false>(false);
+  const weekNo = router.query?.weekNo || undefined;
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -32,11 +35,32 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
       weekNo: index + 1,
     }));
 
+  useEffect(() => {
+    if (!weekNo) return;
+
+    const removeQueryParam = (param: string) => {
+      const { pathname, query } = router;
+      const params = new URLSearchParams(query as any);
+      params.delete(param);
+      router.replace({ pathname, query: params.toString() }, undefined, {
+        shallow: true,
+      });
+    };
+
+    const element = document.getElementById(`week-no-${weekNo}`);
+    element?.scrollIntoView({
+      behavior: "smooth",
+    });
+
+    removeQueryParam("weekNo");
+  }, [router, weekNo]);
+
   return (
     <div className={styles.syllabus}>
-      {lessonsGroupByWeek?.map((week) => (
-        <div key={week.weekNo}>
+      {lessonsGroupByWeek?.map((week, index) => (
+        <div key={week.weekNo + index}>
           <Typography
+            id={`week-no-${week.weekNo}`}
             color="text.secondary"
             className={styles.weekTitle}
             variant="h5"
@@ -44,12 +68,12 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
             Week {week.weekNo}
           </Typography>
           <div>
-            {week.lessons?.map((lesson) => {
+            {week.lessons?.map((lesson, index) => {
               const canCollapse =
                 lesson.description || lesson.resources?.length;
               return (
                 <Accordion
-                  key={lesson.id}
+                  key={lesson.id + index}
                   expanded={expanded === lesson.id}
                   onChange={canCollapse ? handleChange(lesson.id) : undefined}
                 >

@@ -10,8 +10,11 @@ const ResourcesList: React.FC<{ resources: Array<Resource> }> = ({
 }) => {
   return (
     <List dense>
-      {resources?.map((resource) => (
-        <ListItem key={resource.url} className={styles.resourceListItem}>
+      {resources?.map((resource, index) => (
+        <ListItem
+          key={resource.url + index}
+          className={styles.resourceListItem}
+        >
           <ListItemIcon className={styles.resourceListItemIcon}>
             {resource.type === "file" && <DescriptionOutlinedIcon />}
             {resource.type === "video" && <PlayCircleOutlinedIcon />}

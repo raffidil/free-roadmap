@@ -47,8 +47,8 @@ const CourseCard: React.FC<{ course: Course; weekNo?: number }> = ({
           </ListItemButton>
         </ListItem>
         <Divider className={styles.divider} />
-        {course.lessons?.map((lesson) => (
-          <ListItem key={lesson.id} className={styles.listItem}>
+        {course.lessons?.map((lesson, index) => (
+          <ListItem key={lesson.id + index} className={styles.listItem}>
             <ListItemText primary={lesson.name} />
           </ListItem>
         ))}

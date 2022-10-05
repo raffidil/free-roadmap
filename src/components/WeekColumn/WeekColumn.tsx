@@ -20,9 +20,9 @@ const WeekColumn: React.FC<{
       </Typography>
       <Card className={styles.card} elevation={0}>
         <Grid container rowGap="16px">
-          {courses?.map((course) =>
+          {courses?.map((course, index) =>
             course ? (
-              <Grid item key={course.id} xs={12}>
+              <Grid item key={course.id + index} xs={12}>
                 <CourseCard course={course} weekNo={weekNo} />
               </Grid>
             ) : null

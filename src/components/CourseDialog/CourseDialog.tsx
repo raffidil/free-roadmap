@@ -38,7 +38,7 @@ const CourseDialog: React.FC<{
     <Dialog
       open
       onClose={onClose}
-      PaperProps={{ className: styles.dialogPaper }}
+      PaperProps={{ className: styles.dialogPaper, elevation: 4 }}
     >
       <DialogTitle>
         {course?.name}

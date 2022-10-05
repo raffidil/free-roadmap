@@ -67,7 +67,7 @@ const Dashboard: NextPage<{
         onSwiper={onSwiper}
       >
         {weeks.map((week, i) => (
-          <SwiperSlide key={week.weekNo}>
+          <SwiperSlide key={week.weekNo + i}>
             <WeekColumn courses={week.courses} weekNo={week.weekNo} />
           </SwiperSlide>
         ))}

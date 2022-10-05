@@ -24,8 +24,8 @@ const Resources: React.FC<{ course?: Course }> = ({ course }) => {
           <Divider className={styles.divider} />
         </>
       )}
-      {lessonsWithResource?.map((lesson) => (
-        <div key={lesson.id}>
+      {lessonsWithResource?.map((lesson, index) => (
+        <div key={lesson.id + index}>
           <Typography
             color="text.secondary"
             className={styles.lessonTitle}

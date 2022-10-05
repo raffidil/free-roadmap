@@ -25,9 +25,9 @@ const Overview: React.FC<{ course?: Course }> = ({ course }) => {
           Tags
         </Typography>
         <div className={styles.chipsContainer}>
-          {course?.tag?.map((tag) => (
+          {course?.tag?.map((tag, index) => (
             <Chip
-              key={tag.label}
+              key={tag.label + index}
               label={tag.label}
               sx={{
                 bgcolor: colors?.[tag.color]?.[800],
