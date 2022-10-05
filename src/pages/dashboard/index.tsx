@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IconButton } from "@mui/material";
+import { IconButton, Paper, Typography } from "@mui/material";
 import { NextPage } from "next";
 import WeekColumn from "../../components/WeekColumn";
 import styles from "./index.module.scss";
@@ -54,9 +54,19 @@ const Dashboard: NextPage<{
 
   return (
     <div className={styles.container}>
-      <IconButton onClick={onSwiperPrev} disabled={swiperObj?.isBeginning}>
-        <ArrowBackIosNewIcon />
-      </IconButton>
+      <div className={styles.headerContainer}>
+        <Typography variant={isMobile ? "h5" : "h4"}>
+          Week View Schedule
+        </Typography>
+        <Paper>
+          <IconButton onClick={onSwiperPrev} disabled={swiperObj?.isBeginning}>
+            <ArrowBackIosNewIcon />
+          </IconButton>
+          <IconButton onClick={onSwiperNext} disabled={swiperObj?.isEnd}>
+            <ArrowForwardIosIcon />
+          </IconButton>
+        </Paper>
+      </div>
       <Swiper
         observer
         observeParents
@@ -72,9 +82,6 @@ const Dashboard: NextPage<{
           </SwiperSlide>
         ))}
       </Swiper>
-      <IconButton onClick={onSwiperNext} disabled={swiperObj?.isEnd}>
-        <ArrowForwardIosIcon />
-      </IconButton>
     </div>
   );
 };

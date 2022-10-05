@@ -1,14 +1,15 @@
 .dialogPaper {
   min-width: 80vw;
-  height: 80vh;
   max-height: 1024px;
+  min-height: 80vh;
+  height: 80vh;
   background-color: var(--palette-common-grey-25);
 
   @media (--viewport-md) {
     min-width: 100vw;
     width: 100vw;
-    height: 100vh;
     max-height: unset;
+    height: inherit;
   }
 }
 

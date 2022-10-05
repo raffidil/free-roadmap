@@ -39,6 +39,7 @@ const CourseDialog: React.FC<{
       open
       onClose={onClose}
       PaperProps={{ className: styles.dialogPaper, elevation: 4 }}
+      fullScreen={isMobile}
     >
       <DialogTitle>
         {course?.name}

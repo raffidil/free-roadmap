@@ -15,7 +15,7 @@ const WeekColumn: React.FC<{
 }> = ({ courses, weekNo }) => {
   return (
     <div className={styles.container}>
-      <Typography className={styles.title} variant="h6">
+      <Typography className={styles.title} variant="h6" color="text.secondary">
         Week {pad(weekNo || 0)}
       </Typography>
       <Card className={styles.card} elevation={0}>

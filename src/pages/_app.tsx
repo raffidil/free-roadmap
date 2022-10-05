@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { createTheme, ThemeProvider } from "@mui/material";
+import Head from "next/head";
 
 const muiTheme = createTheme({
   ...theme,
@@ -17,6 +18,9 @@ const muiTheme = createTheme({
 function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={muiTheme}>
+      <Head>
+        <link rel="shortcut icon" href="favicon.svg" />
+      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
