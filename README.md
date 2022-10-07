@@ -4,7 +4,7 @@
 <img src="./public/favicon.svg" width="180px" />
 </p>
 
-🧭 [free-roadmap.vercel.app](https://free-roadmap.vercel.app/weeks)
+🧭 [freeroadmap.info](https://freeroadmap.info/weeks)
 
 👉🏽 This is a road-map for beginners who want to learn web development from scratch. It's based on real world experiences of a group of mentors and instructors and it's being used and improved over time.
 
