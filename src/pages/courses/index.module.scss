@@ -1,0 +1,17 @@
+.gridItem {
+}
+
+.courseItemCard {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    box-shadow: var(--shadows-4);
+  }
+}
+
+.gridContainer {
+  margin-top: 16px;
+}
