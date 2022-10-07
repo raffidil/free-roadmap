@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Free RoadMap
 
-## Getting Started
+<img src="./public/favicon.svg" width="150px" style="left: calc(50% - 75px);position: relative"/>
 
-First, run the development server:
+🧭 [free-roadmap.vercel.app](https://free-roadmap.vercel.app/weeks)
+
+👉🏽 This is a road-map for beginners who want to learn web development from scratch. It's based on real world experiences of a group of mentors and instructors and it's being used and improved over time.
+
+💎 We will be happy to use your experiences about syllabus and the whole road-map flow.
+
+## How to contribute
+
+This is a NextJS (React) project with static data written in TS, no API call and backend.
+
+### Installation
+
+```sh
+yarn
+```
+
+Run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Courses data
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The data of each course is placed in `src/data/courses` directory as a single `ts` file which each of them is representing a single course.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To access all courses information you can import `courses` as a named module from `src/data`.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can find all necessary types from [here](https://github.com/raffidil/free-roadmap/blob/9b160a64230be8f83ecc9877b6af48d0ad008b7d/src/types/types.ts).
