@@ -1,6 +1,8 @@
 # Free RoadMap
 
-<img src="./public/favicon.svg" width="150px" style="left: calc(50% - 75px);position: relative"/>
+<p align="center">
+<img src="./public/favicon.svg" width="180px" />
+</p>
 
 🧭 [free-roadmap.vercel.app](https://free-roadmap.vercel.app/weeks)
 
