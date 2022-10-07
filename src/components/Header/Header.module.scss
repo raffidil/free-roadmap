@@ -2,6 +2,12 @@
   max-width: calc(var(--breakpoints-values-lg) * 1px);
   width: 100%;
   margin: auto;
+
+  .search {
+    margin-left: auto;
+    position: absolute;
+    right: 8px;
+  }
 }
 
 .drawerBox {

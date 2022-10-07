@@ -19,10 +19,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CalendarViewWeekIcon from "@mui/icons-material/CalendarViewWeek";
 import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay";
 import { useRouter } from "next/router";
+import Search from "../Search";
+import useResponsive from "@/hooks/useResponsive";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
+  const [searchVisibility, setSearchVisibility] = useState(false);
+  const { isMobile, isSM } = useResponsive();
 
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -47,14 +51,27 @@ const Header = () => {
         <IconButton onClick={toggleDrawer(true)} sx={{ mr: "8px" }}>
           <MenuIcon htmlColor="white" />
         </IconButton>
-        <Image src="/icon.svg" height="48px" width="48px" alt="icon" />
-        <Typography
-          sx={{ ml: "16px", fontWeight: 600 }}
-          variant="h5"
-          color="text.contrast"
-        >
-          Free RoadMap
-        </Typography>
+        {!(searchVisibility && isSM) && (
+          <Image src="/icon.svg" height="48px" width="48px" alt="icon" />
+        )}
+
+        {!(searchVisibility && isMobile) && (
+          <Typography
+            sx={{ ml: "16px", fontWeight: 600 }}
+            variant="h5"
+            color="text.contrast"
+          >
+            Free RoadMap
+          </Typography>
+        )}
+        <Search
+          className={styles.search}
+          visible={searchVisibility}
+          onFocus={() => setSearchVisibility(true)}
+          onBlur={(value) =>
+            value?.length ? undefined : setSearchVisibility(false)
+          }
+        />
       </Toolbar>
       <SwipeableDrawer
         anchor="left"

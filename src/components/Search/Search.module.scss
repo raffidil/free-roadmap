@@ -1,0 +1,10 @@
+.visible {
+  width: 440px;
+  max-width: calc(100% - 80px);
+  transition: width 500ms;
+}
+
+.hidden {
+  width: 56px;
+  transition: width 500ms;
+}

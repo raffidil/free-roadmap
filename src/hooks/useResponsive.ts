@@ -9,7 +9,11 @@ type Size = {
 };
 
 // Hook
-function useResponsive(): { windowSize: Size; isMobile: boolean } {
+function useResponsive(): {
+  windowSize: Size;
+  isMobile: boolean;
+  isSM: boolean;
+} {
   // Initialize state with undefined width/height so server and client renders match
   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
   const [windowSize, setWindowSize] = useState<Size>({
@@ -35,6 +39,7 @@ function useResponsive(): { windowSize: Size; isMobile: boolean } {
   return {
     windowSize,
     isMobile: windowSize.width < theme.breakpoints.values.md,
+    isSM: windowSize.width < theme.breakpoints.values.sm,
   };
 }
 
