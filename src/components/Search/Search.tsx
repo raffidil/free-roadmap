@@ -126,7 +126,10 @@ const Search: React.FC<{
             className: inputClassName,
             startAdornment: (
               <InputAdornment position="start" sx={{ ml: "4px" }}>
-                <SearchIcon sx={{ fontSize: "32px" }} />
+                <SearchIcon
+                  sx={{ fontSize: "32px" }}
+                  htmlColor={visible ? "inherit" : "white"}
+                />
               </InputAdornment>
             ),
           }}

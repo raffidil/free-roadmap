@@ -2,9 +2,27 @@
   width: 440px;
   max-width: calc(100% - 80px);
   transition: width 500ms;
+  :global {
+    .MuiInputBase-root {
+      transition: background 500ms;
+    }
+    fieldset {
+      border: none;
+    }
+  }
 }
 
 .hidden {
   width: 56px;
+  max-width: calc(100% - 80px);
   transition: width 500ms;
+  :global {
+    .MuiInputBase-root {
+      background: transparent;
+      transition: background 500ms;
+    }
+    fieldset {
+      border: none;
+    }
+  }
 }
