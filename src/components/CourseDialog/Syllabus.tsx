@@ -102,7 +102,9 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                         >
                           Description
                         </Typography>
-                        <Typography>{lesson.description}</Typography>
+                        <Typography sx={{ whiteSpace: "pre-wrap" }}>
+                          {lesson.description}
+                        </Typography>
                       </>
                     )}
                     {lesson.resources?.length && (

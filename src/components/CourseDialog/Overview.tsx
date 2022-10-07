@@ -14,7 +14,9 @@ const Overview: React.FC<{ course?: Course }> = ({ course }) => {
       >
         Description
       </Typography>
-      <Typography variant="body1">{course?.description}</Typography>
+      <Typography variant="body1" sx={{ whiteSpace: "pre-wrap" }}>
+        {course?.description}
+      </Typography>
 
       <div className={styles.tagContainer}>
         <Typography

@@ -107,7 +107,8 @@ const javascriptCourse: Course = {
     },
     {
       id: "strings",
-      name: "Strings (single and double quotes)",
+      name: "Strings",
+      description: "Single and double quotes",
       weekNo: 3,
     },
     {
@@ -147,7 +148,9 @@ const javascriptCourse: Course = {
     },
     {
       id: "concat",
-      name: 'Concatenating strings, string length, bracket notation, "includes" function',
+      name: "Working with strings",
+      description:
+        'Concatenating strings, string length, bracket notation, "includes" function',
       weekNo: 4,
     },
     {
@@ -182,7 +185,8 @@ const javascriptCourse: Course = {
     },
     {
       id: "array-method",
-      name: "Array methods (pop, push, shift, unshift, splice)",
+      name: "Array methods",
+      description: "Pop, push, shift, unshift, splice",
       weekNo: 6,
     },
     {
@@ -202,12 +206,14 @@ const javascriptCourse: Course = {
     },
     {
       id: "dom",
-      name: "DOM Manipulation (styles, innerText)",
+      name: "DOM Manipulation",
+      description: "Styles and innerText",
       weekNo: 10,
     },
     {
       id: "events",
-      name: "Events (onClick and onMouseOver)",
+      name: "Events",
+      description: "onClick and onMouseOver",
       weekNo: 10,
     },
     {
@@ -232,7 +238,8 @@ const javascriptCourse: Course = {
     },
     {
       id: "timer",
-      name: "Timers: setTimeout and setInterval",
+      name: "Timers",
+      description: "setTimeout and setInterval",
       weekNo: 12,
     },
     {
@@ -257,7 +264,8 @@ const javascriptCourse: Course = {
     },
     {
       id: "promise",
-      name: "Promises (using then/catch syntax)",
+      name: "Promises",
+      description: "Using then/catch syntax",
       weekNo: 13,
     },
     {
