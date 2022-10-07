@@ -1,4 +1,7 @@
 import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Box,
   Dialog,
   DialogContent,
   DialogTitle,
@@ -46,27 +49,29 @@ const CourseDialog: React.FC<{
         <IconButton className={styles.closeButton} onClick={() => onClose()}>
           <CloseIcon />
         </IconButton>
-        <Tabs
-          value={tab}
-          onChange={(e, value) => setTab(value)}
-          aria-label="icon position tabs example"
-        >
-          <Tab
-            icon={<DescriptionOutlinedIcon />}
-            iconPosition={iconPosition}
-            label="Overview"
-          />
-          <Tab
-            icon={<ChromeReaderModeOutlinedIcon />}
-            iconPosition={iconPosition}
-            label="Resources"
-          />
-          <Tab
-            icon={<DateRangeOutlinedIcon />}
-            iconPosition={iconPosition}
-            label="Syllabus"
-          />
-        </Tabs>
+        {!isMobile && (
+          <Tabs
+            value={tab}
+            onChange={(e, value) => setTab(value)}
+            aria-label="icon position tabs example"
+          >
+            <Tab
+              icon={<DescriptionOutlinedIcon />}
+              iconPosition={iconPosition}
+              label="Overview"
+            />
+            <Tab
+              icon={<ChromeReaderModeOutlinedIcon />}
+              iconPosition={iconPosition}
+              label="Resources"
+            />
+            <Tab
+              icon={<DateRangeOutlinedIcon />}
+              iconPosition={iconPosition}
+              label="Syllabus"
+            />
+          </Tabs>
+        )}
       </DialogTitle>
 
       <DialogContent>
@@ -74,6 +79,28 @@ const CourseDialog: React.FC<{
         {tab === 1 && <Resources course={course} />}
         {tab === 2 && <Syllabus course={course} />}
       </DialogContent>
+      {isMobile && (
+        <Box>
+          <BottomNavigation
+            showLabels
+            value={tab}
+            onChange={(e, value) => setTab(value)}
+          >
+            <BottomNavigationAction
+              label="Overview"
+              icon={<DescriptionOutlinedIcon />}
+            />
+            <BottomNavigationAction
+              label="Resources"
+              icon={<ChromeReaderModeOutlinedIcon />}
+            />
+            <BottomNavigationAction
+              label="Syllabus"
+              icon={<DateRangeOutlinedIcon />}
+            />
+          </BottomNavigation>
+        </Box>
+      )}
     </Dialog>
   );
 };

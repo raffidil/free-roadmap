@@ -279,13 +279,9 @@ const MuiComponentsConfig: Components = {
         padding: "6px 6px 8px",
         height: theme.mixins.bottomNavigation.height,
         color: theme.palette.text.secondary,
-        "&.Mui-selected": {
-          color: theme.palette.text.primary,
-        },
       },
       label: {
         "&.Mui-selected": {
-          fontSize: "0.75rem",
           fontWeight: 600,
         },
       },
