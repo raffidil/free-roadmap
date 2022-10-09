@@ -20,6 +20,14 @@ const javascriptCourse: Course = {
       id: "intro",
       name: "History of Internet and Web",
       weekNo: 1,
+      resources: [
+        {
+          id: "web-intro",
+          label: "History of Web",
+          url: "https://web-intro-present.vercel.app/",
+          type: "link",
+        },
+      ],
     },
     {
       id: "what",
