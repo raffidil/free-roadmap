@@ -14,6 +14,8 @@ import max from "lodash/max";
 import ResourcesList from "../ResourcesList";
 import { useRouter } from "next/router";
 import theme from "../../theme/theme";
+import compact from "lodash/compact";
+import ExtensionIcon from "@mui/icons-material/Extension";
 
 const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
   const colors = useColors();
@@ -58,77 +60,110 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
 
   return (
     <div className={styles.syllabus}>
-      {lessonsGroupByWeek?.map((week, index) => (
-        <div key={week.weekNo + index}>
-          <Typography
-            id={`week-no-${week.weekNo}`}
-            color="text.secondary"
-            className={styles.weekTitle}
-            variant="h5"
-          >
-            Week {week.weekNo}
-          </Typography>
-          <div>
-            {week.lessons?.map((lesson, index) => {
-              const canCollapse =
-                lesson.description || lesson.resources?.length;
-              return (
+      {lessonsGroupByWeek?.map((week, index) => {
+        const weekExercises =
+          course?.exercises?.filter((item) => item.weekNo === week.weekNo) ||
+          [];
+        const exercises = compact(
+          week.lessons?.map((lesson) => lesson.exercises).flat(2)
+        ).concat(weekExercises);
+        return (
+          <div key={week.weekNo + index}>
+            <Typography
+              id={`week-no-${week.weekNo}`}
+              color="text.secondary"
+              className={styles.weekTitle}
+              variant="h5"
+            >
+              Week {week.weekNo}
+            </Typography>
+            <div>
+              {week.lessons?.map((lesson, index) => {
+                const canCollapse =
+                  lesson.description || lesson.resources?.length;
+                return (
+                  <Accordion
+                    key={lesson.id + index}
+                    expanded={expanded === lesson.id}
+                    onChange={canCollapse ? handleChange(lesson.id) : undefined}
+                  >
+                    <AccordionSummary
+                      expandIcon={canCollapse ? <ExpandMoreIcon /> : undefined}
+                      aria-controls="panel1bh-content"
+                      id="panel1bh-header"
+                      sx={{
+                        bgcolor:
+                          expanded === lesson.id
+                            ? theme.palette.common.grey["200"]
+                            : "unset",
+                      }}
+                    >
+                      <Typography>{lesson.name}</Typography>
+                    </AccordionSummary>
+
+                    <AccordionDetails>
+                      {lesson.description && (
+                        <>
+                          <Typography
+                            variant="body2"
+                            color="text.secondary"
+                            className={styles.title}
+                          >
+                            Description
+                          </Typography>
+                          <Typography sx={{ whiteSpace: "pre-wrap" }}>
+                            {lesson.description}
+                          </Typography>
+                        </>
+                      )}
+                      {lesson.resources?.length && (
+                        <>
+                          {lesson.description?.length && (
+                            <Divider className={styles.divider} />
+                          )}
+                          <Typography
+                            variant="body2"
+                            color="text.secondary"
+                            className={styles.title}
+                          >
+                            Resources
+                          </Typography>
+                          <ResourcesList resources={lesson?.resources} />
+                        </>
+                      )}
+                    </AccordionDetails>
+                  </Accordion>
+                );
+              })}
+              {Boolean(exercises.length) && (
                 <Accordion
-                  key={lesson.id + index}
-                  expanded={expanded === lesson.id}
-                  onChange={canCollapse ? handleChange(lesson.id) : undefined}
+                  expanded={expanded === week.weekNo + "-exercises"}
+                  onChange={handleChange(week.weekNo + "-exercises")}
                 >
                   <AccordionSummary
-                    expandIcon={canCollapse ? <ExpandMoreIcon /> : undefined}
+                    expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1bh-content"
+                    className={styles.exercises}
                     id="panel1bh-header"
                     sx={{
                       bgcolor:
-                        expanded === lesson.id
-                          ? theme.palette.common.grey["200"]
+                        expanded === week.weekNo + "-exercises"
+                          ? theme.palette.common.grey[200]
                           : "unset",
                     }}
                   >
-                    <Typography>{lesson.name}</Typography>
+                    <ExtensionIcon htmlColor={theme.palette.primary.main} />
+                    <Typography color="primary.main">Exercises</Typography>
                   </AccordionSummary>
-
                   <AccordionDetails>
-                    {lesson.description && (
-                      <>
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          className={styles.title}
-                        >
-                          Description
-                        </Typography>
-                        <Typography sx={{ whiteSpace: "pre-wrap" }}>
-                          {lesson.description}
-                        </Typography>
-                      </>
-                    )}
-                    {lesson.resources?.length && (
-                      <>
-                        {lesson.description?.length && (
-                          <Divider className={styles.divider} />
-                        )}
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          className={styles.title}
-                        >
-                          Resources
-                        </Typography>
-                        <ResourcesList resources={lesson?.resources} />
-                      </>
-                    )}
+                    <ResourcesList resources={exercises} />
                   </AccordionDetails>
                 </Accordion>
-              );
-            })}
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };

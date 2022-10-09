@@ -58,7 +58,7 @@ const palette = {
   },
   teal: {
     lighter: "#e0f2f1",
-    light: "#4db6ac",
+    light: "#80cbc4",
     medium: "#00897b",
     dark: "#00695c",
     darker: "#004d40",

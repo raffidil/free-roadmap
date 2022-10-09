@@ -49,6 +49,13 @@ button.closeButton {
   .divider {
     margin: 16px 0px;
   }
+
+  .exercises {
+    align-items: center;
+    svg {
+      margin-right: 8px;
+    }
+  }
 }
 
 .resources {

@@ -21,6 +21,7 @@ export type Resource = {
   type: "link" | "file" | "video";
   url: string;
   tag?: Array<Tag>;
+  weekNo?: number;
 };
 
 export type Course = {
@@ -30,6 +31,7 @@ export type Course = {
   lessons?: Array<Lesson>;
   tag?: Array<Tag>;
   resources?: Array<Resource>;
+  exercises?: Array<Resource>;
   color?: Color;
   data?: { [key: string]: any };
 };
