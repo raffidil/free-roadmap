@@ -22,6 +22,7 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
   const router = useRouter();
   const [expanded, setExpanded] = useState<string | false>(false);
   const weekNo = router.query?.weekNo || undefined;
+  const lessonIdParam = router.query?.lesson || undefined;
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -57,6 +58,24 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
 
     removeQueryParam("weekNo");
   }, [router, weekNo]);
+
+  useEffect(() => {
+    if (!lessonIdParam) return;
+
+    const removeQueryParam = (param: string) => {
+      const { pathname, query } = router;
+      const params = new URLSearchParams(query as any);
+      params.delete(param);
+      router.replace({ pathname, query: params.toString() }, undefined, {
+        shallow: true,
+      });
+    };
+    setExpanded(lessonIdParam.toString());
+
+    removeQueryParam("lesson");
+  }, [lessonIdParam, router]);
+
+  console.log({ expanded });
 
   return (
     <div className={styles.syllabus}>
@@ -101,37 +120,39 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                       <Typography>{lesson.name}</Typography>
                     </AccordionSummary>
 
-                    <AccordionDetails>
-                      {lesson.description && (
-                        <>
-                          <Typography
-                            variant="body2"
-                            color="text.secondary"
-                            className={styles.title}
-                          >
-                            Description
-                          </Typography>
-                          <Typography sx={{ whiteSpace: "pre-wrap" }}>
-                            {lesson.description}
-                          </Typography>
-                        </>
-                      )}
-                      {lesson.resources?.length && (
-                        <>
-                          {lesson.description?.length && (
-                            <Divider className={styles.divider} />
-                          )}
-                          <Typography
-                            variant="body2"
-                            color="text.secondary"
-                            className={styles.title}
-                          >
-                            Resources
-                          </Typography>
-                          <ResourcesList resources={lesson?.resources} />
-                        </>
-                      )}
-                    </AccordionDetails>
+                    {canCollapse && (
+                      <AccordionDetails>
+                        {lesson.description && (
+                          <>
+                            <Typography
+                              variant="body2"
+                              color="text.secondary"
+                              className={styles.title}
+                            >
+                              Description
+                            </Typography>
+                            <Typography sx={{ whiteSpace: "pre-wrap" }}>
+                              {lesson.description}
+                            </Typography>
+                          </>
+                        )}
+                        {lesson.resources?.length && (
+                          <>
+                            {lesson.description?.length && (
+                              <Divider className={styles.divider} />
+                            )}
+                            <Typography
+                              variant="body2"
+                              color="text.secondary"
+                              className={styles.title}
+                            >
+                              Resources
+                            </Typography>
+                            <ResourcesList resources={lesson?.resources} />
+                          </>
+                        )}
+                      </AccordionDetails>
+                    )}
                   </Accordion>
                 );
               })}

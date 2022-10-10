@@ -2,6 +2,7 @@ import {
   AppBar,
   Box,
   Button,
+  Divider,
   IconButton,
   List,
   ListItem,
@@ -18,6 +19,7 @@ import styles from "./Header.module.scss";
 import MenuIcon from "@mui/icons-material/Menu";
 import CalendarViewWeekIcon from "@mui/icons-material/CalendarViewWeek";
 import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { useRouter } from "next/router";
 import Search from "../Search";
 import useResponsive from "@/hooks/useResponsive";
@@ -45,6 +47,7 @@ const Header = () => {
     router.push({ pathname: path });
     setIsDrawerOpen(false);
   };
+
   return (
     <AppBar color="primary" className={styles.root}>
       <Toolbar className={styles.toolbar}>
@@ -86,6 +89,16 @@ const Header = () => {
           <Typography className={styles.title} variant="h5">
             Free RoadMap
           </Typography>
+          <Typography
+            className={styles.subtitle}
+            variant="subtitle1"
+            color="text.secondary"
+          >
+            A road-map for beginners who want to learn web development from
+            scratch
+          </Typography>
+
+          <Divider sx={{ mt: "8px", mb: "16px" }} />
           <List>
             <ListItem disablePadding>
               <ListItemButton onClick={() => openRoute("weeks")}>
@@ -101,6 +114,18 @@ const Header = () => {
                   <CalendarViewDayIcon />
                 </ListItemIcon>
                 <ListItemText primary="Courses" />
+              </ListItemButton>
+            </ListItem>
+            <Divider sx={{ mt: "16px", mb: "16px" }} />
+            <ListItem disablePadding>
+              <ListItemButton
+                href="https://github.com/raffidil/free-roadmap"
+                target="_blank"
+              >
+                <ListItemIcon>
+                  <GitHubIcon />
+                </ListItemIcon>
+                <ListItemText primary="GitHub repository" />
               </ListItemButton>
             </ListItem>
           </List>

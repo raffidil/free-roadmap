@@ -24,6 +24,33 @@ const lessons = compact(
   )
 ).flat(2);
 
+const lessonsResources = compact(
+  lessons
+    .map((lesson) =>
+      lesson.resources?.map((resource) => ({
+        ...resource,
+        courseName: lesson.courseName,
+        courseId: lesson.courseId,
+        lessonName: lesson.name,
+        lessonId: lesson.id,
+        weekNo: lesson.weekNo,
+      }))
+    )
+    .flat(2)
+);
+
+const coursesResources = compact(
+  courses
+    .map((course) =>
+      course.resources?.map((resource) => ({
+        ...resource,
+        courseName: course.name,
+        courseId: course.id,
+      }))
+    )
+    .flat(2)
+);
+
 export type Option = {
   title: string;
   subtitle?: string;
@@ -76,11 +103,56 @@ const Search: React.FC<{
             dialog: "course",
             course: lesson.courseId,
             weekNo: lesson.weekNo,
+            lesson: lesson.id,
           },
         },
       }));
 
-    setOptions([...filteredCoursesByName, ...filteredLessonsByName]);
+    const filteredLessonsResourcesByLabel = lessonsResources
+      .filter((resource) =>
+        resource.label
+          .toLocaleLowerCase()
+          .includes(inputValue.toLocaleLowerCase())
+      )
+      .map((resource) => ({
+        title: resource.label,
+        type: "Resource",
+        subtitle: `${resource.courseName} > ${resource.lessonName}`,
+        path: {
+          query: {
+            dialog: "course",
+            course: resource.courseId,
+            weekNo: resource.weekNo,
+            lesson: resource.lessonId,
+          },
+        },
+      }));
+
+    const filteredCoursesResourcesByLabel = coursesResources
+      .filter((resource) =>
+        resource.label
+          .toLocaleLowerCase()
+          .includes(inputValue.toLocaleLowerCase())
+      )
+      .map((resource) => ({
+        title: resource.label,
+        type: "Resource",
+        subtitle: `${resource.courseName}`,
+        path: {
+          query: {
+            dialog: "course",
+            course: resource.courseId,
+            resources: "1",
+          },
+        },
+      }));
+
+    setOptions([
+      ...filteredCoursesByName,
+      ...filteredLessonsByName,
+      ...filteredLessonsResourcesByLabel,
+      ...filteredCoursesResourcesByLabel,
+    ]);
   }, [inputValue]);
 
   const onAutoCompleteChange = (value: any) => {
@@ -97,6 +169,7 @@ const Search: React.FC<{
         { [styles.visible]: visible, [styles.hidden]: !visible },
         className
       )}
+      classes={{ groupLabel: styles.groupLabel }}
       options={options}
       groupBy={(option) => option?.type}
       getOptionLabel={(option) => (option as Option)?.title ?? ""}

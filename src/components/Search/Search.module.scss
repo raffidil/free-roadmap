@@ -26,3 +26,9 @@
     }
   }
 }
+
+.groupLabel {
+  color: var(--palette-primary-main);
+  border-top: 1px solid var(--palette-divider);
+  border-bottom: 1px solid var(--palette-divider);
+}
