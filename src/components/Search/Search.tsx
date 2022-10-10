@@ -51,6 +51,33 @@ const coursesResources = compact(
     .flat(2)
 );
 
+const lessonsExercises = compact(
+  lessons
+    .map((lesson) =>
+      lesson.exercises?.map((exercise) => ({
+        ...exercise,
+        courseName: lesson.courseName,
+        courseId: lesson.courseId,
+        lessonName: lesson.name,
+        lessonId: lesson.id,
+        weekNo: lesson.weekNo,
+      }))
+    )
+    .flat(2)
+);
+
+const coursesExercises = compact(
+  courses
+    .map((course) =>
+      course.exercises?.map((exercise) => ({
+        ...exercise,
+        courseName: course.name,
+        courseId: course.id,
+      }))
+    )
+    .flat(2)
+);
+
 export type Option = {
   title: string;
   subtitle?: string;
@@ -147,11 +174,53 @@ const Search: React.FC<{
         },
       }));
 
+    const filteredLessonsExercisesByLabel = lessonsExercises
+      .filter((exercise) =>
+        exercise.label
+          .toLocaleLowerCase()
+          .includes(inputValue.toLocaleLowerCase())
+      )
+      .map((exercise) => ({
+        title: exercise.label,
+        type: "Exercise",
+        subtitle: `${exercise.courseName} > ${exercise.lessonName}`,
+        path: {
+          query: {
+            dialog: "course",
+            course: exercise.courseId,
+            weekNo: exercise.weekNo,
+            lesson: exercise.weekNo + "-exercises",
+          },
+        },
+      }));
+
+    const filteredCoursesExercisesByLabel = coursesExercises
+      .filter((exercise) =>
+        exercise.label
+          .toLocaleLowerCase()
+          .includes(inputValue.toLocaleLowerCase())
+      )
+      .map((exercise) => ({
+        title: exercise.label,
+        type: "Exercise",
+        subtitle: `${exercise.courseName}`,
+        path: {
+          query: {
+            dialog: "course",
+            course: exercise.courseId,
+            weekNo: exercise.weekNo,
+            lesson: exercise.weekNo + "-exercises",
+          },
+        },
+      }));
+
     setOptions([
       ...filteredCoursesByName,
       ...filteredLessonsByName,
       ...filteredLessonsResourcesByLabel,
       ...filteredCoursesResourcesByLabel,
+      ...filteredLessonsExercisesByLabel,
+      ...filteredCoursesExercisesByLabel,
     ]);
   }, [inputValue]);
 

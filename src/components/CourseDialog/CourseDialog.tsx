@@ -29,14 +29,16 @@ const CourseDialog: React.FC<{
   const { query } = useRouter();
   const courseId = query?.course || "";
   const weekNo = query?.weekNo || undefined;
+  const resourcesParam = query?.resources || undefined;
   const course = courses.find((item) => item.id === courseId);
   const [tab, setTab] = useState(0);
   const { isMobile } = useResponsive();
   const iconPosition = isMobile ? "top" : "start";
 
   useEffect(() => {
-    if (weekNo) setTab(2);
-  }, [weekNo]);
+    if (resourcesParam) setTab(1);
+    else if (weekNo) setTab(2);
+  }, [weekNo, resourcesParam]);
 
   return (
     <Dialog
