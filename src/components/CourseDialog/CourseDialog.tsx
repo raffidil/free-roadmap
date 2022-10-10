@@ -8,6 +8,7 @@ import {
   IconButton,
   Tab,
   Tabs,
+  Typography,
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { courses } from "../../data";
@@ -45,7 +46,7 @@ const CourseDialog: React.FC<{
       fullScreen={isMobile}
     >
       <DialogTitle>
-        {course?.name}
+        <Typography variant="h6">{course?.name}</Typography>
         <IconButton className={styles.closeButton} onClick={() => onClose()}>
           <CloseIcon />
         </IconButton>

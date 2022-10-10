@@ -152,7 +152,10 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                           : "unset",
                     }}
                   >
-                    <ExtensionIcon htmlColor={theme.palette.primary.main} />
+                    <ExtensionIcon
+                      htmlColor={theme.palette.primary.main}
+                      className={styles.puzzleIcon}
+                    />
                     <Typography color="primary.main">Exercises</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
