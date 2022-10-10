@@ -276,7 +276,7 @@ const fundamentalCourse: Course = {
       id: "w16c",
       weekNo: 16,
       name: "Introduction to Python",
-    },
+    }
   ],
 };
 

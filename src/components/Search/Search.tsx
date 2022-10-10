@@ -42,8 +42,6 @@ const Search: React.FC<{
   const [inputValue, setInputValue] = useState("");
   const router = useRouter();
 
-  console.log({ options });
-
   useEffect(() => {
     if (inputValue?.length === 0) {
       setOptions([]);
