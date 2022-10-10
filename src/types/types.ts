@@ -18,7 +18,7 @@ export type Resource = {
   id: string;
   label: string;
   description?: string;
-  type: "link" | "file" | "video";
+  type: "link" | "file" | "video" | "slide";
   url: string;
   tag?: Array<Tag>;
   weekNo?: number;

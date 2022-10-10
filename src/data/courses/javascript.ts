@@ -25,7 +25,7 @@ const javascriptCourse: Course = {
           id: "web-intro",
           label: "History of Web",
           url: "https://web-intro-present.vercel.app/",
-          type: "link",
+          type: "slide",
         },
       ],
     },
