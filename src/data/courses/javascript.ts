@@ -162,6 +162,14 @@ const javascriptCourse: Course = {
       id: "script-src",
       name: "Script tag src attribute",
       weekNo: 4,
+      resources: [
+        {
+          id: "web-intro",
+          label: "Slides",
+          url: "/presentation/js/week4",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "console",

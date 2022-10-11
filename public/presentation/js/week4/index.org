@@ -1,0 +1,72 @@
+#+TITLE: Week 4
+#+Author:
+
+# -*- org-re-reveal-title-slide: nil; org-use-property-inheritance: reveal_; -*-
+#+OPTIONS: toc:nil num:0 reveal_single_file:t
+#+REVEAL_EXTRA_CSS: extra.css
+#+REVEAL_THEME: moon
+
+* Script Tag
+#+begin_src html
+...
+<script src="myscripts.js"></script>
+...
+#+end_src
+
+* Console.log
+
+* Ternary :noexport:
+#+begin_src js
+const x = a > b ? 10 : 11;
+#+end_src
+
+* Strings
+- length
+- includes
+- toUpperCase
+- bracket notation
+- replace
+- substring
+- slice
+
+* Global Functions
+- parseInt
+
+* Flowcharts
+
+** Sort three numbers descending
+#+ATTR_HTML: :style width:700px;
+[[./flow-3.jpg]]
+
+** Digits
+#+ATTR_HTML: :style width:700px;
+[[./flow-3dig.jpg]]
+
+** Digits
+#+ATTR_HTML: :style width:700px;
+[[./flow-3digex.jpg]]
+
+** Print even numbers
+#+ATTR_HTML: :style height: calc(100vh - 360px);
+[[./flow-2.jpg]]
+
+* Logical statement
+Example:
+Divisible by three and five
+* FreeCodeCamp
+
+* Assignment :noexport:
+
+۱. الگوریتمی بنویسید که سه عدد را از ورودی بگیرد و آنها را به ترتیب نزولی چاپ کند.
+۲. الگوریتمی بنویسید که یک عدد سه رقمی بگیرد و جمع رقم‌هایش را چاپ کند.
+
+۲. الگوریتمی بنویسید که یک عدد سه رقمی را گرفته و وارون آن را به خروجی چاپ کند (۱۲۳ را بگیرد و ۳۲۱ را بدهد).
+
+۳. الگوریتمی بنویسید که نمرات یک کلاس که ۱۵ دانشجو دارد را گرفته و معدل کلاس را چاپ کند.
+۴. الگوریتمی سوال قبل را به صورتی کامل کنید که تعداد مردودی‌ها، کمترین و بیشترین نمره را چاپ کند.
+۵. الگوریتمی بنویسید که ۱۰۰۰ عدد را از ورودی گرفته و تعداد اعداد مثبت و منفی و صفر را چاپ کند.
+۷. الگوریتمی بنویسید که مجموع اعداد یک تا ۱۰۰۰ را حساب کند.
+۸. الگوریتمی بنویسید که یک عدد بگیرد و تعداد ارقام آن‌ را چاپ کند.
+۹. الگوریتمی بنویسید که دو عدد بگیرد و تمام اعداد زوج بین آنها را چاپ کند.
+۱۰. الگوریتمی بنویسید که تمام اعداد زیر هزار که بر پنج بخشپذیر هستند را چاپ کند.
+۱۱. تابعی بنویسید که یک عدد را بگیرد و آن را به توان n برساند.
