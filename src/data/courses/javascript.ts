@@ -220,6 +220,14 @@ const javascriptCourse: Course = {
       id: "nested-arrays",
       name: "Nested arrays",
       weekNo: 6,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week6",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "array-method",
