@@ -7,19 +7,20 @@ const databaseCourse: Course = {
   description: "Basic HTML/CSS",
   tag: [tags.frontend],
   color: "lightGreen",
+  presentations: [
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week1",
+      type: "slide",
+      weekNo: 1,
+    },
+  ],
   lessons: [
     {
       id: "intro",
       name: "History of Internet and Web",
       weekNo: 1,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week1",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "what",

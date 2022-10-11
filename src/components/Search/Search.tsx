@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import { UrlObject } from "url";
 import cx from "classnames";
 import SearchIcon from "@mui/icons-material/Search";
+import theme from "@/theme/theme";
 
 const lessons = compact(
   courses.map((course) =>
@@ -71,6 +72,18 @@ const coursesExercises = compact(
     .map((course) =>
       course.exercises?.map((exercise) => ({
         ...exercise,
+        courseName: course.name,
+        courseId: course.id,
+      }))
+    )
+    .flat(2)
+);
+
+const coursesPresentations = compact(
+  courses
+    .map((course) =>
+      course.presentations?.map((presentation) => ({
+        ...presentation,
         courseName: course.name,
         courseId: course.id,
       }))
@@ -203,13 +216,33 @@ const Search: React.FC<{
       .map((exercise) => ({
         title: exercise.label,
         type: "Exercise",
-        subtitle: `${exercise.courseName}`,
+        subtitle: `${exercise.courseName} > Week ${exercise.weekNo}`,
         path: {
           query: {
             dialog: "course",
             course: exercise.courseId,
             weekNo: exercise.weekNo,
             lesson: exercise.weekNo + "-exercises",
+          },
+        },
+      }));
+
+    const filteredCoursesPresentationsByLabel = coursesPresentations
+      .filter((presentation) =>
+        presentation.label
+          .toLocaleLowerCase()
+          .includes(inputValue.toLocaleLowerCase())
+      )
+      .map((presentation) => ({
+        title: presentation.label,
+        type: "Presentation",
+        subtitle: `${presentation.courseName} > Week ${presentation.weekNo}`,
+        path: {
+          query: {
+            dialog: "course",
+            course: presentation.courseId,
+            weekNo: presentation.weekNo,
+            lesson: presentation.weekNo + "-presentations",
           },
         },
       }));
@@ -221,6 +254,7 @@ const Search: React.FC<{
       ...filteredCoursesResourcesByLabel,
       ...filteredLessonsExercisesByLabel,
       ...filteredCoursesExercisesByLabel,
+      ...filteredCoursesPresentationsByLabel,
     ]);
   }, [inputValue]);
 
@@ -252,6 +286,7 @@ const Search: React.FC<{
           <ListItemText
             primary={option.title}
             secondary={option.subtitle ?? undefined}
+            secondaryTypographyProps={{ style: { ...theme.typography.body2 } }}
           />
         </ListItem>
       )}
