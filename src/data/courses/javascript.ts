@@ -287,6 +287,14 @@ const javascriptCourse: Course = {
       id: "dom-add-class",
       name: "DOM: Add and remove classes",
       weekNo: 11,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week11",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "dom-input",

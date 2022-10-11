@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello</title>
+    <script>
+      function changeColor(idOfElement) {
+        const number1Element = document.querySelector(idOfElement);
+
+        if (number1Element.classList.contains("blue")) {
+          number1Element.classList.remove("blue");
+          number1Element.classList.add("red");
+        } else {
+          number1Element.classList.remove("red");
+          number1Element.classList.add("blue");
+        }
+      }
+    </script>
+    <style type="text/css" media="screen">
+      .square {
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: #12171a 2px solid;
+        transition: all 2s ease-out;
+      }
+
+      .red {
+        background-color: #f44336;
+        color: white;
+        width: 120px;
+      }
+
+      .blue {
+        background-color: #a1d1f7;
+        color: black;
+        width: 140px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Change classes</h1>
+
+    <p id="error"></p>
+
+    <div>
+      <div onclick="changeColor('#one')" class="square" id="one">Number 1</div>
+      <div onclick="changeColor('#two')" class="square" id="two">Number 2</div>
+      <div onclick="changeColor('#three')" class="square" id="three">
+        Number 3
+      </div>
+    </div>
+  </body>
+</html>
