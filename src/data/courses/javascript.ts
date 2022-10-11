@@ -43,6 +43,14 @@ const javascriptCourse: Course = {
       id: "languages",
       name: "Programming languages",
       weekNo: 2,
+      resources: [
+        {
+          id: "web-intro",
+          label: "Programming Languages",
+          url: "/presentation/js/week2",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "devtool",
