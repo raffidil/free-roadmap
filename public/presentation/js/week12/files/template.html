@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Template</title>
+  </head>
+  <script>
+    function gradient() {
+      var element = document.querySelector(".maindiv");
+      var firstColor = document.querySelector("#color1").value;
+      var secondColor = document.querySelector("#color2").value;
+      var degree = document.querySelector("#deg").value;
+
+      if (degree == "") {
+        degree = 0;
+      }
+
+      element.style.backgroundImage =
+        "linear-gradient(" +
+        degree +
+        "deg" +
+        "," +
+        firstColor +
+        "," +
+        secondColor +
+        ")";
+
+      const background = `linear-gradient(${degree} deg, ${firstColor}, ${secondColor})`;
+    }
+  </script>
+  <body></body>
+</html>

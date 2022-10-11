@@ -311,6 +311,14 @@ const javascriptCourse: Course = {
       name: "Timers",
       description: "setTimeout and setInterval",
       weekNo: 12,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week12",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "callback",
