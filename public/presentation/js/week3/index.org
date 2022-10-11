@@ -1,0 +1,167 @@
+#+TITLE: Week 3
+# -*- org-re-reveal-title-slide: nil; org-use-property-inheritance: reveal_; -*-
+#+OPTIONS: toc:nil num:0 reveal_single_file:t
+# #+REVEAL_ROOT: https://raw.githubusercontent.com/hakimel/reveal.js/master/
+#+REVEAL_EXTRA_CSS: extra.css
+
+* Flowchart
+** Flowcharts
+[[./flowchart1.png]]
+** Symbols
+[[./flowchart-symbols.jpg]]
+** Examples
+[[./flowchart-alarm.png]]
+** Example (Miro)
+#+ATTR_HTML: :width 500
+[[./flowchart-js.jpg]]
+** Example
+#+ATTR_HTML: :width 500 :style background-color: white; padding: 8px;
+[[./flowchart-hospital.png]]
+
+* Functions
+** Definitions
+#+begin_src js
+function f(x) {
+    var y = x + 1;
+    return y;
+}
+#+end_src
+
+
+# Because we have not yet talked about control logic
+# ** Definitions
+# [[./function.png]]
+
+** Invocation
+#+begin_src
+var a = f(10);
+var b = f(5);
+#+end_src
+
+** Example
+#+begin_src js
+function average(x, y) {
+    var result = ( x + y ) / 2;
+    return result;
+}
+
+var myResult = average(10, 20);
+#+end_src
+
+** Scope
+#+begin_src js
+function average(x, y) {
+    var result = ( x + y ) / 2;
+    return result;
+}
+
+function sum(x, y) {
+    var result = x + y;
+    return result;
+}
+
+x;
+y;
+result;
+#+end_src
+
+* Comments
+#+begin_src js
+/* This function averages two numbrs */
+function average(x, y) {
+    // TODO Make sure to test this
+    var result = ( x + y ) / 2; // Nice!
+    return result;
+}
+#+end_src
+
+* String
+#+begin_src js
+var name = "Sam";
+var lastName = 'Harris';
+#+end_src
+
+* "if" control logic
+** Example
+#+begin_src js
+var x = 20;
+var z = 30;
+var y;
+var name = 'Sam';
+
+if (x > 10 || z == 30) {
+    y = 2;
+}
+
+if (name == 'Samim') {
+    y = 20;
+}
+#+end_src
+
+** Boolean
+#+begin_src js
+var isRainy = true;
+var hasUmbrella = false;
+
+if (isRainy && hasUmbrella) {
+    bringUmbrella();
+}
+#+end_src
+
+** Logical Operators
+- && (and)
+- || (or)
+- != (not equal)
+- == (equal)
+- > (greater than)
+- < (less than)
+- >= (greater than or equal to)
+- <= (less than or equal to)
+
+** Example
+#+begin_src js
+function getMax(x, y) {
+    var result;
+
+    if (x > y) {
+        result = x;
+    } else {
+        result = y;
+    }
+
+    return result;
+}
+
+function getMaxFour(x, y, z, w) {
+    var max1 = getMax(x, y);
+    var max2 = getMax(z, w);
+    var result = getMax(max1, max2);
+    return result;
+}
+#+end_src
+
+
+** Example
+#+begin_src js
+var z = 5 > 10;
+#+end_src
+
+* HTML Script tag
+#+begin_src html
+<html>
+  <head>
+    <script>
+      // Write Javascript here in script tag
+      var x = 10;
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+#+end_src
+* =const= and =let=
+#+begin_src js
+var b = 20;
+let c = 30;
+const a = 10;
+#+end_src

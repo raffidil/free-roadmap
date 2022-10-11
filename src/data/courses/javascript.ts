@@ -23,7 +23,7 @@ const javascriptCourse: Course = {
       resources: [
         {
           id: "web-intro",
-          label: "History of Web",
+          label: "Slides",
           url: "/presentation/js/week1",
           type: "slide",
         },
@@ -46,7 +46,7 @@ const javascriptCourse: Course = {
       resources: [
         {
           id: "web-intro",
-          label: "Programming Languages",
+          label: "Slides",
           url: "/presentation/js/week2",
           type: "slide",
         },
@@ -82,6 +82,12 @@ const javascriptCourse: Course = {
       name: "Flowchart",
       weekNo: 3,
       resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week3",
+          type: "slide",
+        },
         {
           id: "flowchart",
           label: "Common Flowchart Symbols",
