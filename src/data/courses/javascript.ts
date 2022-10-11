@@ -17,29 +17,6 @@ const javascriptCourse: Course = {
   ],
   lessons: [
     {
-      id: "intro",
-      name: "History of Internet and Web",
-      weekNo: 1,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week1",
-          type: "slide",
-        },
-      ],
-    },
-    {
-      id: "what",
-      name: "What is HTML, CSS and JS?",
-      weekNo: 1,
-    },
-    {
-      id: "evolve",
-      name: "How does the Web evolve?",
-      weekNo: 1,
-    },
-    {
       id: "languages",
       name: "Programming languages",
       weekNo: 2,
