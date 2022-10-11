@@ -22,7 +22,7 @@ const javascriptCourse: Course = {
       weekNo: 1,
       resources: [
         {
-          id: "web-intro",
+          id: "slides",
           label: "Slides",
           url: "/presentation/js/week1",
           type: "slide",
@@ -45,7 +45,7 @@ const javascriptCourse: Course = {
       weekNo: 2,
       resources: [
         {
-          id: "web-intro",
+          id: "slides",
           label: "Slides",
           url: "/presentation/js/week2",
           type: "slide",
@@ -164,7 +164,7 @@ const javascriptCourse: Course = {
       weekNo: 4,
       resources: [
         {
-          id: "web-intro",
+          id: "slides",
           label: "Slides",
           url: "/presentation/js/week4",
           type: "slide",
@@ -202,6 +202,14 @@ const javascriptCourse: Course = {
       id: "loops",
       name: "Loops (for, while)",
       weekNo: 5,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week5",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "arrays",
