@@ -244,6 +244,14 @@ const javascriptCourse: Course = {
       id: "sort",
       name: "Sorting algorithms",
       weekNo: 7,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week7",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "object",
@@ -255,6 +263,14 @@ const javascriptCourse: Course = {
       name: "DOM Manipulation",
       description: "Styles and innerText",
       weekNo: 10,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week10",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "events",
