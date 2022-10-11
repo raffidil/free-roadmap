@@ -1,0 +1,49 @@
+#+Author:
+#+TITLE: Week 6
+
+# -*- org-re-reveal-title-slide: nil; org-use-property-inheritance: reveal_; -*-
+#+OPTIONS: toc:nil num:0 reveal_single_file:t
+#+REVEAL_EXTRA_CSS: extra.css
+#+REVEAL_THEME: moon
+
+* Iterating arrays
+** Reading each index
+** Changing each element
+- Square each
+- Concat array of string values
+** Matrix and tables using nested arrays
+-
+* Nested Loops
+** Swap
+** Sort
+* Array methods
+** Array methods
+- Index
+- Push
+- Pop
+- Shift
+- Unshift
+- Splice
+** Merge arrays
+** Remove an element
+* Formatting
+* Resources
+- FreeCodeCamp
+- W3School
+- https://www.jschallenger.com/javascript-arrays
+* Assignments :noexport:
+
+**  ضرب دو تا آرایه تو هم (برداری)
+** دو تا ورودی بگیره. اولی عدده. دومی آرایه. آرایه رو به توان عدد برسونه و جمع کنه.
+** الگوریتمی بنویسید که یک عدد را بگیرد و به توان n برساند.
+** اول بودن اعداد
+** تاس انداختن
+** چاپ ستاره به صورت مثلث
+**  تابعی بنویسید که یک آرایه عددی با اندازه دلخواه کاربر از کاربر دریافت کند، میانگین را حساب کرده و فاصله عددی بین میانگین تا هر عدد را محاسبه کرده و نمایش دهد. برای مثال :
+اندازه دلخواه کاربر : ۴
+آرایه ورودی {۱۰،۲۰،۳۰،۴۰}
+میانگین: ۲۵
+فاصله عدد ۱۰ از ۲۵ = ۱۵
+فاصله عدد ۲۰ از ۲۵ = ۵
+فاصله عدد ۳۰ از ۲۵ = ۵
+فاصله عدد ۴۰ از ۲۵ = ۱۵

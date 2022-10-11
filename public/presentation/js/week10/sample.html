@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample</title>
+    <script>
+      function randomText() {
+        const texts = ["a", "b", "c", "d", "e", "f"];
+        const r = Math.random();
+        const number = r * texts.length;
+        const intNumber = Math.floor(number);
+        const myRandomText = texts[intNumber];
+        document.querySelector("#random").innerText = myRandomText;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Take your chances!</h1>
+    <p id="random"></p>
+    <button onclick="randomText()">Click Here!</button>
+  </body>
+</html>

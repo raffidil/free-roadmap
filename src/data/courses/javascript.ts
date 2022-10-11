@@ -17,32 +17,17 @@ const javascriptCourse: Course = {
   ],
   lessons: [
     {
-      id: "intro",
-      name: "History of Internet and Web",
-      weekNo: 1,
-      resources: [
-        {
-          id: "web-intro",
-          label: "History of Web",
-          url: "https://web-intro-present.vercel.app/",
-          type: "slide",
-        },
-      ],
-    },
-    {
-      id: "what",
-      name: "What is HTML, CSS and JS?",
-      weekNo: 1,
-    },
-    {
-      id: "evolve",
-      name: "How does the Web evolve?",
-      weekNo: 1,
-    },
-    {
       id: "languages",
       name: "Programming languages",
       weekNo: 2,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week2",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "devtool",
@@ -74,6 +59,12 @@ const javascriptCourse: Course = {
       name: "Flowchart",
       weekNo: 3,
       resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week3",
+          type: "slide",
+        },
         {
           id: "flowchart",
           label: "Common Flowchart Symbols",
@@ -148,6 +139,14 @@ const javascriptCourse: Course = {
       id: "script-src",
       name: "Script tag src attribute",
       weekNo: 4,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week4",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "console",
@@ -180,6 +179,14 @@ const javascriptCourse: Course = {
       id: "loops",
       name: "Loops (for, while)",
       weekNo: 5,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week5",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "arrays",
@@ -190,6 +197,14 @@ const javascriptCourse: Course = {
       id: "nested-arrays",
       name: "Nested arrays",
       weekNo: 6,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week6",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "array-method",
@@ -206,6 +221,14 @@ const javascriptCourse: Course = {
       id: "sort",
       name: "Sorting algorithms",
       weekNo: 7,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week7",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "object",
@@ -217,6 +240,14 @@ const javascriptCourse: Course = {
       name: "DOM Manipulation",
       description: "Styles and innerText",
       weekNo: 10,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week10",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "events",
@@ -233,6 +264,14 @@ const javascriptCourse: Course = {
       id: "dom-add-class",
       name: "DOM: Add and remove classes",
       weekNo: 11,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week11",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "dom-input",
@@ -249,6 +288,14 @@ const javascriptCourse: Course = {
       name: "Timers",
       description: "setTimeout and setInterval",
       weekNo: 12,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week12",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "callback",
@@ -269,6 +316,14 @@ const javascriptCourse: Course = {
       id: "fetch",
       name: "Fetch API",
       weekNo: 13,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week13",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "promise",
@@ -285,6 +340,14 @@ Use addEventListener
 Use select HTML tag
 `,
       weekNo: 14,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week14",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "attr",

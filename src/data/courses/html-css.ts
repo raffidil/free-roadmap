@@ -9,10 +9,33 @@ const databaseCourse: Course = {
   color: "lightGreen",
   lessons: [
     {
+      id: "intro",
+      name: "History of Internet and Web",
+      weekNo: 1,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week1",
+          type: "slide",
+        },
+      ],
+    },
+    {
+      id: "what",
+      name: "What is HTML, CSS and JS?",
+      weekNo: 1,
+    },
+    {
+      id: "evolve",
+      name: "How does the Web evolve?",
+      weekNo: 1,
+    },
+    {
       id: "basic-syntax",
       name: "Basic syntax",
       description: "Basic HTML tags: h1, h1, p, comment, main and nesting.",
-      weekNo: 1,
+      weekNo: 2,
       exercises: [
         {
           id: "free1",

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Timers</title>
+    <script>
+      let counter = 0;
+
+      let increment = (name) => {
+        let timerElement = document.querySelector("#timer");
+        counter = counter + 1;
+        timerElement.innerText = counter;
+      };
+
+      let timer;
+
+      const toggle = () => {
+        let button = document.querySelector("button");
+
+        if (timer) {
+          clearInterval(timer);
+          timer = undefined;
+          button.innerText = "Start";
+          return;
+        }
+
+        timer = setInterval(increment, 1000);
+        button.innerText = "Stop";
+      };
+    </script>
+  </head>
+  <body>
+    <div id="timer">0</div>
+    <button onclick="toggle()">Start</button>
+  </body>
+</html>
