@@ -339,6 +339,14 @@ const javascriptCourse: Course = {
       id: "fetch",
       name: "Fetch API",
       weekNo: 13,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week13",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "promise",
@@ -355,6 +363,14 @@ Use addEventListener
 Use select HTML tag
 `,
       weekNo: 14,
+      resources: [
+        {
+          id: "slides",
+          label: "Slides",
+          url: "/presentation/js/week14",
+          type: "slide",
+        },
+      ],
     },
     {
       id: "attr",

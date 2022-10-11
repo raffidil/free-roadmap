@@ -1,0 +1,28 @@
+#+Author:
+#+TITLE: Week 14
+
+# -*- org-re-reveal-title-slide: nil; org-use-property-inheritance: reveal_; -*-
+#+OPTIONS: toc:nil num:0 reveal_single_file:t timestamp:nil
+#+REVEAL_EXTRA_CSS: extra.css
+#+REVEAL_THEME: moon
+
+* Add/Delete author
+- Catch API errors and display them
+- forEach
+- addEventListener
+- Use select
+- About async functions
+
+* Attributes
+- getAttribute
+- setAttribute
+
+* LocalStorage
+* Weather
+
+* Assignment
+Note: use forEach for in one of your functions
+
+- Rewrite three of your functions from assignment 3 using arrow functions syntax
+- Use OpenWeatherMap API to display 3 day hourly forecast
+- Watch first game of the YouTube video *Learn JavaScript by Building 7 Games - Full Course*
