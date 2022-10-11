@@ -630,6 +630,9 @@ const MuiComponentsConfig: Components = {
   },
   MuiTooltip: {
     styleOverrides: {
+      tooltip: {
+        ...theme.typography.subtitle1,
+      },
       tooltipArrow: {
         backgroundColor: theme.palette.common.grey[900],
         color: theme.palette.common.neutral.white,

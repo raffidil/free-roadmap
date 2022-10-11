@@ -15,19 +15,90 @@ const javascriptCourse: Course = {
       url: "https://www.freecodecamp.org/learn ",
     },
   ],
+  presentations: [
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week2",
+      type: "slide",
+      weekNo: 2,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week3",
+      type: "slide",
+      weekNo: 3,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week4",
+      type: "slide",
+      weekNo: 4,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week5",
+      type: "slide",
+      weekNo: 5,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week6",
+      type: "slide",
+      weekNo: 6,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week7",
+      type: "slide",
+      weekNo: 7,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week10",
+      type: "slide",
+      weekNo: 10,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week11",
+      type: "slide",
+      weekNo: 11,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week12",
+      type: "slide",
+      weekNo: 12,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week13",
+      type: "slide",
+      weekNo: 13,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "/presentation/js/week14",
+      type: "slide",
+      weekNo: 14,
+    },
+  ],
   lessons: [
     {
       id: "languages",
       name: "Programming languages",
       weekNo: 2,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week2",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "devtool",
@@ -59,12 +130,6 @@ const javascriptCourse: Course = {
       name: "Flowchart",
       weekNo: 3,
       resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week3",
-          type: "slide",
-        },
         {
           id: "flowchart",
           label: "Common Flowchart Symbols",
@@ -139,14 +204,6 @@ const javascriptCourse: Course = {
       id: "script-src",
       name: "Script tag src attribute",
       weekNo: 4,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week4",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "console",
@@ -179,14 +236,6 @@ const javascriptCourse: Course = {
       id: "loops",
       name: "Loops (for, while)",
       weekNo: 5,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week5",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "arrays",
@@ -197,14 +246,6 @@ const javascriptCourse: Course = {
       id: "nested-arrays",
       name: "Nested arrays",
       weekNo: 6,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week6",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "array-method",
@@ -221,14 +262,6 @@ const javascriptCourse: Course = {
       id: "sort",
       name: "Sorting algorithms",
       weekNo: 7,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week7",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "object",
@@ -240,14 +273,6 @@ const javascriptCourse: Course = {
       name: "DOM Manipulation",
       description: "Styles and innerText",
       weekNo: 10,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week10",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "events",
@@ -264,14 +289,6 @@ const javascriptCourse: Course = {
       id: "dom-add-class",
       name: "DOM: Add and remove classes",
       weekNo: 11,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week11",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "dom-input",
@@ -288,14 +305,6 @@ const javascriptCourse: Course = {
       name: "Timers",
       description: "setTimeout and setInterval",
       weekNo: 12,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week12",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "callback",
@@ -316,14 +325,6 @@ const javascriptCourse: Course = {
       id: "fetch",
       name: "Fetch API",
       weekNo: 13,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week13",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "promise",
@@ -340,14 +341,6 @@ Use addEventListener
 Use select HTML tag
 `,
       weekNo: 14,
-      resources: [
-        {
-          id: "slides",
-          label: "Slides",
-          url: "/presentation/js/week14",
-          type: "slide",
-        },
-      ],
     },
     {
       id: "attr",

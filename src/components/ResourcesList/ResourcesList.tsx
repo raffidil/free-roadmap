@@ -1,5 +1,5 @@
 import { Resource } from "@/types/types";
-import { Link, List, ListItem, ListItemIcon } from "@mui/material";
+import { Link, List, ListItem, ListItemIcon, Tooltip } from "@mui/material";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import PlayCircleOutlinedIcon from "@mui/icons-material/PlayCircleOutlined";
 import LinkOutlinedIcon from "@mui/icons-material/LinkOutlined";
@@ -24,14 +24,16 @@ const ResourcesList: React.FC<{ resources: Array<Resource> }> = ({
               <LinkOutlinedIcon />
             )}
           </ListItemIcon>
-          <Link
-            rel="noopener"
-            target="_blank"
-            href={resource.url}
-            underline="hover"
-          >
-            {resource?.label || resource.url}
-          </Link>
+          <Tooltip title={resource.description}>
+            <Link
+              rel="noopener"
+              target="_blank"
+              href={resource.url}
+              underline="hover"
+            >
+              {resource?.label || resource.url}
+            </Link>
+          </Tooltip>
         </ListItem>
       ))}
     </List>

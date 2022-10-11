@@ -16,6 +16,7 @@ import { useRouter } from "next/router";
 import theme from "../../theme/theme";
 import compact from "lodash/compact";
 import ExtensionIcon from "@mui/icons-material/Extension";
+import OndemandVideoOutlinedIcon from "@mui/icons-material/OndemandVideoOutlined";
 
 const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
   const colors = useColors();
@@ -86,6 +87,10 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
         const exercises = compact(
           week.lessons?.map((lesson) => lesson.exercises).flat(2)
         ).concat(weekExercises);
+        const presentations =
+          course?.presentations?.filter(
+            (item) => item.weekNo === week.weekNo
+          ) || [];
         return (
           <div key={week.weekNo + index}>
             <Typography
@@ -164,7 +169,7 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1bh-content"
-                    className={styles.exercises}
+                    className={styles.extra}
                     id="panel1bh-header"
                     sx={{
                       bgcolor:
@@ -181,6 +186,34 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <ResourcesList resources={exercises} />
+                  </AccordionDetails>
+                </Accordion>
+              )}
+              {Boolean(presentations.length) && (
+                <Accordion
+                  expanded={expanded === week.weekNo + "-presentations"}
+                  onChange={handleChange(week.weekNo + "-presentations")}
+                >
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1bh-content"
+                    className={styles.extra}
+                    id="panel1bh-header"
+                    sx={{
+                      bgcolor:
+                        expanded === week.weekNo + "-presentations"
+                          ? theme.palette.common.grey[200]
+                          : "unset",
+                    }}
+                  >
+                    <OndemandVideoOutlinedIcon
+                      htmlColor={theme.palette.primary.main}
+                      className={styles.puzzleIcon}
+                    />
+                    <Typography color="primary.main">Presentations</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <ResourcesList resources={presentations} />
                   </AccordionDetails>
                 </Accordion>
               )}
