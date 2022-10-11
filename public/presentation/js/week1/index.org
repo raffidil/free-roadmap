@@ -1,0 +1,298 @@
+# -*- org-re-reveal-title-slide: nil; org-use-property-inheritance: reveal_; -*-
+#+OPTIONS: toc:nil num:0 reveal_single_file:t
+# #+REVEAL_ROOT: https://raw.githubusercontent.com/hakimel/reveal.js/master/
+#+REVEAL_EXTRA_CSS: extra.css
+
+* Internet history :noexport:
+- [[https://www.youtube.com/watch?v=9hIQjrMHTv4][History of the Internet - YouTube]]
+- [[https://www.youtube.com/watch?v=hDcYHbiOpJ4][World Wide Web in Plain English - YouTube]]
+
+* History
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #11998e, #38ef7d)
+:END:
+** Internet
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #11998e, #38ef7d)
+:END:
+  Evolution of networks
+
+  From military to universities
+
+  [[./internet.png]]
+** Internet Map
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #11998e, #38ef7d)
+:END:
+  [[./map.png]]
+** Initial ideas
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #11998e, #38ef7d)
+:END:
+
+Memex
+
+
+[[./memex.jpg]]
+
+** CERN and Lee, 1989
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #11998e, #38ef7d)
+:END:
+and the boom
+
+[[./next.jpg]]
+** World Wide Web
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #11998e, #38ef7d)
+:END:
+[[./timeline.png]]
+* Web Basics
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+** HTML
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+*Hypertext markup language*
+
+[[./html_files.png]]
+
+** Anatomy of an HTML element :noexport:
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+[[./anatomy.png]]
+** Sample document
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+#+BEGIN_SRC html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is a paragraph</p>
+  </body>
+</html>
+#+END_SRC
+** Web browser
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+#+ATTR_HTML: :width 400px
+[[./browsers.png]]
+
+** Server and client
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+
+[[./simple-client-server.png]]
+
+** Web server
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+[[./servers.jpeg]]
+
+** URL/URI
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+*Uniform Resource Identifier/Locator*
+
+#+ATTR_HTML: :style background: #dedede;
+[[./url.png]]
+
+** Hyperlinks and hypertext
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+#+BEGIN_SRC html
+<a href="https://en.wikipedia.org/wiki/World_Wide_Web">
+  Learn about World Wide Web
+</a>
+#+END_SRC
+** HTTP
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+*Hypertext transfer protocol*
+
+#+ATTR_HTML: :style background: #dedede;
+[[./http.png]]
+** CSS
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+*Cascading Style Sheets*
+** Sample CSS
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+#+BEGIN_SRC css
+p {
+  color: red;
+}
+#+END_SRC
+** Javascript
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+- The only programming language in browsers
+- Made in 1995 in 10 days
+- Not related to Java (car and carpet)
+- ECMAScript and standards
+** HTML/CSS/JS
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #c94b4b, #4b134f)
+:END:
+
+#+ATTR_HTML: :width 600px
+[[./3parts.jpeg]]
+* History, continued
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #00f260, #0575e6)
+:END:
+** Hyperlinks make the web
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #00f260, #0575e6)
+:reveal_extra_attr: class="whitelink"
+:END:
+
+[[http://internet-map.net/][The Internet map]]
+** CERN made everything open and publicly available
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #00f260, #0575e6)
+:END:
+
+** Emergence of search engines and directories
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #00f260, #0575e6)
+:END:
+
+** The boom
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #00f260, #0575e6)
+:END:
+
+banks and stores, chat, learn, talk, etc.
+
+** Browser wars and W3C standards
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #00f260, #0575e6)
+:END:
+
+#+ATTR_HTML: :width 70%
+[[./war.png]]
+* One web: How the web is created?
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364)
+:END:
+** World Wide Web Consortium
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364)
+:END:
+
+#+ATTR_HTML: :width 400px
+[[./w3c.png]]
+** Some links
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364)
+:END:
+
+- [[https://www.w3.org/Consortium/Member/List][Current Members]]
+- [[https://www.w3.org/TR/][All Standards and Drafts - W3C]]
+- [[https://en.wikipedia.org/wiki/World_Wide_Web_Consortium#Specification_maturation][Specification maturation - Wikipedia]]
+- [[https://www.w3.org/Style/CSS/][Cascading Style Sheets]]
+- MDN as a reference
+  + [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements][<h1>–<h6>: The HTML Section Heading elements - HTML: HyperText Markup Languag...]]
+** Some links
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364)
+:END:
+
+- Cursor as an example:
+  + [[https://www.chromestatus.com/feature/5575087101050880][Unprefix CSS "grab" and "grabbing" Values for Cursor Property - Chrome Platfo...]]
+  + [[https://developer.mozilla.org/en-US/docs/Web/CSS/cursor][cursor - CSS: Cascading Style Sheets | MDN]]
+** Learn to learn
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364)
+:END:
+
+Learn to read the docs
+* Future of the Web
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99)
+:END:
+** Open and free nature of the Web
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99)
+:END:
+
+#+ATTR_REVEAL: :frag (appear)
+- Non-proprietary
+- Interoperable
+- Far-reaching
+- Decentralized power
+- Equality
+- Paper-free
+** Latest Web technologies
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99)
+:END:
+
+- Progressive Web Apps
+- Virtual Reality and Augmented Reality
+- WebRTC
+- WebAssembly
+- Web of Things
+- Web of Payments
+- TV and streaming
+** Protect the web
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99)
+:END:
+
+- Net neutrality
+- Accessibility
+- Security
+- Trust
+**  
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99)
+:END:
+
+“The social value of the Web is that it enables human communication, commerce, and opportunities to share knowledge [and] to make these
+benefits available to all people, whatever their hardware, software, network infrastructure,
+native language, culture, geographical location, or
+physical or mental ability.”
+
+Sir Tim Berners-Lee, inventor of the World Wide Web
+** Mission
+:PROPERTIES:
+:reveal_background: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99)
+:END:
+
+#+ATTR_REVEAL: :frag (appear)
+- Advance the Web
+- Connect Humanity
+- Empower People
+
+#+ATTR_HTML: :width 220px
+[[./unity.png]]

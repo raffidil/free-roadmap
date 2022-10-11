@@ -9,6 +9,14 @@ const nextConfig = {
     return config;
   },
   swcMinify: true,
+  rewrites: async () => {
+    return [
+      {
+        source: "/presentation/:customPage(.*)",
+        destination: "/presentation/:customPage/index.html",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
