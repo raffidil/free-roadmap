@@ -98,7 +98,28 @@ const javascriptCourse: Course = {
     {
       id: "languages",
       name: "Programming languages",
+      description: "Learn a bit about programming languages and Javascript",
       weekNo: 2,
+      resources: [
+        {
+          id: "1",
+          label: "Codecademy - What Is a Programming Language?",
+          url: "https://www.codecademy.com/resources/blog/programming-languages/",
+          type: "link",
+        },
+        {
+          id: "2",
+          label: "Codecademy - What Is a Programming Language?",
+          url: "https://youtu.be/EGQh5SZctaE",
+          type: "video",
+        },
+        {
+          id: "3",
+          label: "Codecademy - What Is JavaScript Used For?",
+          url: "https://www.codecademy.com/resources/blog/what-is-javascript-used-for/",
+          type: "link",
+        },
+      ],
     },
     {
       id: "devtool",
@@ -107,23 +128,182 @@ const javascriptCourse: Course = {
       weekNo: 2,
     },
     {
-      id: "math",
-      name: "Numbers and math",
-      description:
-        "Numbers and math (add, subtract, multiply, divide, remainder) and concept of statement",
-      weekNo: 2,
-    },
-    {
       id: "variables",
       name: "Variables",
       description:
         "Variables and concepts of keyword, assignment, declaration, environment, being undefined, case sensitivity and camel case",
       weekNo: 2,
+      
+      resources: [
+        {
+          id: "1",
+          label: "freecodecamp - Declare JavaScript Variables",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/declare-javascript-variables",
+          type: "link",
+        },
+        {
+          id: "2",
+          label: "freecodecamp - Storing Values with the Assignment Operator",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/storing-values-with-the-assignment-operator",
+          type: "link",
+        },
+        {
+          id: "3",
+          label: "freecodecamp - Assigning the Value of One Variable to Another",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/assigning-the-value-of-one-variable-to-another",
+          type: "link",
+        },
+        {
+          id: "4",
+          label: "freecodecamp - Initializing Variables with the Assignment Operator",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/initializing-variables-with-the-assignment-operator",
+          type: "link",
+        },
+        {
+          id: "5",
+          label: "freecodecamp - Declare String Variables",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/declare-string-variables",
+          type: "link",
+        },
+        {
+          id: "6",
+          label: "freecodecamp - Understanding Uninitialized Variables",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/understanding-uninitialized-variables",
+          type: "link",
+        },
+        {
+          id: "7",
+          label: "freecodecamp - Understanding Case Sensitivity in Variables",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/understanding-case-sensitivity-in-variables",
+          type: "link",
+        },
+        {
+          id: "8",
+          label: "freecodecamp - Explore Differences Between the var and let Keywords",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/explore-differences-between-the-var-and-let-keywords",
+          type: "link",
+        },
+        {
+          id: "9",
+          label: "freecodecamp - Declare a Read-Only Variable with the const Keyword",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/declare-a-read-only-variable-with-the-const-keyword",
+          type: "link",
+        },
+        {
+          id: "10",
+          label: "w3schools - JavaScript Variables (Optional)",
+          url: "https://www.w3schools.com/js/js_variables.asp",
+          type: "link",
+        },
+       
+      ],
     },
+    {
+      id: "math",
+      name: "Numbers and math",
+      description:
+        "Numbers and math (add, subtract, multiply, divide, remainder) and concept of statement",
+      weekNo: 2,
+      resources: [
+        {
+          id: "1",
+          label: "freecodecamp - Add Two Numbers with JavaScript",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/add-two-numbers-with-javascript",
+          type: "link",
+        },
+        {
+          id: "2",
+          label: "freecodecamp - Subtract One Number from Another with JavaScript",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/subtract-one-number-from-another-with-javascript",
+          type: "link",
+        },
+        {
+          id: "3",
+          label: "freecodecamp - Multiply Two Numbers with JavaScript",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/multiply-two-numbers-with-javascript",
+          type: "link",
+        },
+        {
+          id: "4",
+          label: "freecodecamp - Divide One Number by Another with JavaScript",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/divide-one-number-by-another-with-javascript",
+          type: "link",
+        },
+        {
+          id: "5",
+          label: "freecodecamp - Increment a Number with JavaScript",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/increment-a-number-with-javascript",
+          type: "link",
+        },
+        {
+          id: "6",
+          label: "freecodecamp - Decrement a Number with JavaScript",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/decrement-a-number-with-javascript",
+          type: "link",
+        },
+        {
+          id: "7",
+          label: "freecodecamp - Create Decimal Numbers with JavaScript",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/create-decimal-numbers-with-javascript",
+          type: "link",
+        },
+        {
+          id: "8",
+          label: "freecodecamp - Multiply Two Decimals with JavaScript",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/multiply-two-decimals-with-javascript",
+          type: "link",
+        },
+        {
+          id: "9",
+          label: "freecodecamp - Divide One Decimal by Another with JavaScript",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/divide-one-decimal-by-another-with-javascript",
+          type: "link",
+        },
+        {
+          id: "10",
+          label: "freecodecamp - Finding a Remainder in JavaScript",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/finding-a-remainder-in-javascript",
+          type: "link",
+        },
+        {
+          id: "11",
+          label: "freecodecamp - Compound Assignment With Augmented Addition",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-addition",
+          type: "link",
+        },
+        {
+          id: "12",
+          label: "freecodecamp - Compound Assignment With Augmented Subtraction",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-subtraction",
+          type: "link",
+        },
+        {
+          id: "13",
+          label: "freecodecamp - Compound Assignment With Augmented Multiplication",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-multiplication",
+          type: "link",
+        },
+        {
+          id: "14",
+          label: "freecodecamp - Compound Assignment With Augmented Division",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-division",
+          type: "link",
+        },
+      ],
+    },
+
     {
       id: "vs-code",
       name: "Writing Javascript files in VS Code",
       weekNo: 2,
+      resources: [
+        {
+          id: "flowchart",
+          label: "Download vs code",
+          type: "link",
+          url: "https://code.visualstudio.com/download",
+        },
+      ],
     },
     {
       id: "flowchart",
