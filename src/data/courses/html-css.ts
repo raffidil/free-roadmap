@@ -11,7 +11,7 @@ const databaseCourse: Course = {
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week1",
+      url: "https://js-presentations.vercel.app/presentation/js/week1",
       type: "slide",
       weekNo: 1,
     },

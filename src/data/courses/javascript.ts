@@ -19,77 +19,77 @@ const javascriptCourse: Course = {
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week2",
+      url: "https://js-presentations.vercel.app/presentation/js/week2",
       type: "slide",
       weekNo: 2,
     },
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week3",
+      url: "https://js-presentations.vercel.app/presentation/js/week3",
       type: "slide",
       weekNo: 3,
     },
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week4",
+      url: "https://js-presentations.vercel.app/presentation/js/week4",
       type: "slide",
       weekNo: 4,
     },
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week5",
+      url: "https://js-presentations.vercel.app/presentation/js/week5",
       type: "slide",
       weekNo: 5,
     },
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week6",
+      url: "https://js-presentations.vercel.app/presentation/js/week6",
       type: "slide",
       weekNo: 6,
     },
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week7",
+      url: "https://js-presentations.vercel.app/presentation/js/week7",
       type: "slide",
       weekNo: 7,
     },
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week10",
+      url: "https://js-presentations.vercel.app/presentation/js/week10",
       type: "slide",
       weekNo: 10,
     },
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week11",
+      url: "https://js-presentations.vercel.app/presentation/js/week11",
       type: "slide",
       weekNo: 11,
     },
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week12",
+      url: "https://js-presentations.vercel.app/presentation/js/week12",
       type: "slide",
       weekNo: 12,
     },
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week13",
+      url: "https://js-presentations.vercel.app/presentation/js/week13",
       type: "slide",
       weekNo: 13,
     },
     {
       id: "slides",
       label: "Slides",
-      url: "/presentation/js/week14",
+      url: "https://js-presentations.vercel.app/presentation/js/week14",
       type: "slide",
       weekNo: 14,
     },
@@ -133,7 +133,7 @@ const javascriptCourse: Course = {
       description:
         "Variables and concepts of keyword, assignment, declaration, environment, being undefined, case sensitivity and camel case",
       weekNo: 2,
-      
+
       resources: [
         {
           id: "1",
@@ -149,13 +149,15 @@ const javascriptCourse: Course = {
         },
         {
           id: "3",
-          label: "freecodecamp - Assigning the Value of One Variable to Another",
+          label:
+            "freecodecamp - Assigning the Value of One Variable to Another",
           url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/assigning-the-value-of-one-variable-to-another",
           type: "link",
         },
         {
           id: "4",
-          label: "freecodecamp - Initializing Variables with the Assignment Operator",
+          label:
+            "freecodecamp - Initializing Variables with the Assignment Operator",
           url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/initializing-variables-with-the-assignment-operator",
           type: "link",
         },
@@ -179,13 +181,15 @@ const javascriptCourse: Course = {
         },
         {
           id: "8",
-          label: "freecodecamp - Explore Differences Between the var and let Keywords",
+          label:
+            "freecodecamp - Explore Differences Between the var and let Keywords",
           url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/explore-differences-between-the-var-and-let-keywords",
           type: "link",
         },
         {
           id: "9",
-          label: "freecodecamp - Declare a Read-Only Variable with the const Keyword",
+          label:
+            "freecodecamp - Declare a Read-Only Variable with the const Keyword",
           url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/declare-a-read-only-variable-with-the-const-keyword",
           type: "link",
         },
@@ -195,7 +199,6 @@ const javascriptCourse: Course = {
           url: "https://www.w3schools.com/js/js_variables.asp",
           type: "link",
         },
-       
       ],
     },
     {
@@ -213,7 +216,8 @@ const javascriptCourse: Course = {
         },
         {
           id: "2",
-          label: "freecodecamp - Subtract One Number from Another with JavaScript",
+          label:
+            "freecodecamp - Subtract One Number from Another with JavaScript",
           url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/subtract-one-number-from-another-with-javascript",
           type: "link",
         },
@@ -273,13 +277,15 @@ const javascriptCourse: Course = {
         },
         {
           id: "12",
-          label: "freecodecamp - Compound Assignment With Augmented Subtraction",
+          label:
+            "freecodecamp - Compound Assignment With Augmented Subtraction",
           url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-subtraction",
           type: "link",
         },
         {
           id: "13",
-          label: "freecodecamp - Compound Assignment With Augmented Multiplication",
+          label:
+            "freecodecamp - Compound Assignment With Augmented Multiplication",
           url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-multiplication",
           type: "link",
         },
