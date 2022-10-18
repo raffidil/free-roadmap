@@ -169,7 +169,7 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1bh-content"
-                    className={styles.extra}
+                    classes={{ content: styles.extra }}
                     id="panel1bh-header"
                     sx={{
                       bgcolor:
@@ -197,7 +197,7 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1bh-content"
-                    className={styles.extra}
+                    classes={{ content: styles.extra }}
                     id="panel1bh-header"
                     sx={{
                       bgcolor:

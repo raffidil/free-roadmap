@@ -30,6 +30,7 @@ const ResourcesList: React.FC<{ resources: Array<Resource> }> = ({
               target="_blank"
               href={resource.url}
               underline="hover"
+              sx={{ mt: "2px" }}
             >
               {resource?.label || resource.url}
             </Link>
