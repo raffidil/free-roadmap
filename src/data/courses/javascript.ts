@@ -347,15 +347,33 @@ const javascriptCourse: Course = {
       resources: [
         {
           id: "flowchart",
-          label: "Common Flowchart Symbols",
+          label: "Tutorials Point - Flowchart Elements",
+          type: "link",
+          url: "https://www.tutorialspoint.com/programming_methodologies/programming_methodologies_flowchart_elements.htm",
+        },
+        {
+          id: "flowchart-2",
+          label: "Smart Draw - Common Flowchart Symbols (Optional)",
           type: "link",
           url: "https://www.smartdraw.com/flowchart/flowchart-symbols.htm",
         },
         {
-          id: "flowchart-2",
+          id: "flowchart-3",
           label: "Introduction to Creating Flowcharts",
           type: "video",
           url: "https://www.youtube.com/watch?v=SWRDqTx8d4k",
+        },
+        {
+          id: "flowchart-4",
+          label: "Technokids - How to Make a Flowchart for Programming Easy to Understand",
+          type: "link",
+          url: "https://www.technokids.com/blog/programming/how-to-make-a-flowchart-for-programming-easy-to-understand/",
+        },
+        {
+          id: "flowchart-5",
+          label: "Zellwk - How to think like a programmer",
+          type: "link",
+          url: "https://zellwk.com/blog/think-like-a-programmer/",
         },
         {
           id: "miro",
