@@ -12,7 +12,42 @@ const javascriptCourse: Course = {
       id: "freecodecamp",
       label: "FreeCodeCamp",
       type: "link",
-      url: "https://www.freecodecamp.org/learn ",
+      description: "Great roadmap with good explanations and exercises",
+      url: "https://www.freecodecamp.org/learn",
+    },
+    {
+      id: "javascript_info",
+      label: "javascript.info",
+      type: "link",
+      description: "Deep and perfect explanations with good categorization",
+      url: "https://javascript.info",
+    },
+    {
+      id: "mdn",
+      label: "MDN",
+      type: "link",
+      description: "Deep documents and perfect examples",
+      url: "https://developer.mozilla.org",
+    },
+    {
+      id: "roadmap_sh",
+      label: "Roadmap.sh",
+      type: "link",
+      description: "Great visual roadmap with resources",
+      url: "https://roadmap.sh/javascript",
+    },
+    {
+      id: "codecademy",
+      label: "CodeCademy",
+      type: "link",
+      url: "https://www.codecademy.com/",
+    },
+    {
+      id: "learnjavascript",
+      label: "Learn Javascript",
+      type: "link",
+      description: "Detailed roadmap and categorization",
+      url: "https://learnjavascript.today/",
     },
   ],
   presentations: [
@@ -297,7 +332,6 @@ const javascriptCourse: Course = {
         },
       ],
     },
-
     {
       id: "vs-code",
       name: "Writing Javascript files in VS Code",
@@ -314,78 +348,140 @@ const javascriptCourse: Course = {
     {
       id: "flowchart",
       name: "Flowchart",
+      description: "Learn to make flowchart and algorithmic thinking.",
       weekNo: 3,
       resources: [
         {
           id: "flowchart",
-          label: "Common Flowchart Symbols",
+          label: "Tutorials Point - Flowchart Elements",
+          type: "link",
+          url: "https://www.tutorialspoint.com/programming_methodologies/programming_methodologies_flowchart_elements.htm",
+        },
+        {
+          id: "flowchart-2",
+          label: "Smart Draw - Common Flowchart Symbols (Optional)",
           type: "link",
           url: "https://www.smartdraw.com/flowchart/flowchart-symbols.htm",
         },
         {
-          id: "flowchart-2",
+          id: "flowchart-3",
           label: "Introduction to Creating Flowcharts",
-          type: "link",
+          type: "video",
           url: "https://www.youtube.com/watch?v=SWRDqTx8d4k",
         },
         {
+          id: "flowchart-4",
+          label: "Technokids - How to Make a Flowchart for Programming Easy to Understand",
+          type: "link",
+          url: "https://www.technokids.com/blog/programming/how-to-make-a-flowchart-for-programming-easy-to-understand/",
+        },
+        {
+          id: "flowchart-5",
+          label: "Zellwk - How to think like a programmer",
+          type: "link",
+          url: "https://zellwk.com/blog/think-like-a-programmer/",
+        },
+        {
           id: "miro",
-          label: "Miro",
+          label: "Miro - Flowchart making tool",
           type: "link",
           url: "https://miro.com/",
         },
       ],
     },
     {
-      id: "functions",
-      name: "Functions",
-      description: "Syntax, arguments, scope and return value",
-      weekNo: 3,
-      resources: [
-        {
-          id: "functions",
-          label: "Functions",
-          type: "video",
-          url: "https://www.youtube.com/watch?v=XgKsD6Zwvlc",
-        },
-      ],
-    },
-    {
-      id: "comments",
-      name: "Comments",
-      weekNo: 3,
-    },
-    {
-      id: "strings",
-      name: "Strings",
-      description: "Single and double quotes",
-      weekNo: 3,
-    },
-    {
-      id: "boolean",
-      name: "Boolean",
-      description:
-        "Boolean and logical comparators and “if” (equal, strict equal, less than, greater than, and, or)",
-      weekNo: 3,
-      resources: [
-        {
-          id: "boolean",
-          label: "Boolean logic with if statements",
-          type: "video",
-          url: "https://www.youtube.com/watch?v=SxTp8j-fMMY",
-        },
-      ],
-    },
-    {
-      id: "comments",
-      name: "Comments",
-      weekNo: 3,
-    },
-    {
       id: "script-tag",
-      name: "Script HTML tag",
+      name: "How to Run JS",
+      description: "In this section we are going to run a javascript code by including it into HTML file.",
       weekNo: 3,
+      resources: [
+        {
+          id: "res-1",
+          label: "Linking the javascript file with HTML file",
+          type: "link",
+          url: "https://javascript.info/hello-world",
+        },
+      ],
     },
+    {
+      id: "code-structure",
+      name: "JS Code structure",
+      weekNo: 3,
+      resources: [
+        {
+          id: "res-1",
+          label: "javascript.info - Code structure",
+          type: "link",
+          url: "https://javascript.info/structure",
+        },
+      ],
+    },
+    {
+      id: "communication-with-user",
+      name: "Communication with user",
+      weekNo: 3,
+      resources: [
+        {
+          id: "res-1",
+          label: "javascript.info - Interaction: alert, prompt, confirm",
+          type: "link",
+          url: "https://javascript.info/alert-prompt-confirm",
+        },
+      ],
+    },
+    // {
+    //   id: "functions",
+    //   name: "Functions",
+    //   description: "Syntax, arguments, scope and return value",
+    //   weekNo: 3,
+    //   resources: [
+    //     {
+    //       id: "functions",
+    //       label: "Functions",
+    //       type: "video",
+    //       url: "https://www.youtube.com/watch?v=XgKsD6Zwvlc",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: "comments",
+    //   name: "Comments",
+    //   weekNo: 3,
+    // },
+    // {
+    //   id: "strings",
+    //   name: "Strings",
+    //   description: "Single and double quotes",
+    //   weekNo: 3,
+    //   resources: [
+    //     {
+    //       id: "functions",
+    //       label: "Functions",
+    //       type: "video",
+    //       url: "https://www.youtube.com/watch?v=XgKsD6Zwvlc",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: "boolean",
+    //   name: "Boolean",
+    //   description:
+    //     "Boolean and logical comparators and “if” (equal, strict equal, less than, greater than, and, or)",
+    //   weekNo: 3,
+    //   resources: [
+    //     {
+    //       id: "boolean",
+    //       label: "Boolean logic with if statements",
+    //       type: "video",
+    //       url: "https://www.youtube.com/watch?v=SxTp8j-fMMY",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: "comments",
+    //   name: "Comments",
+    //   weekNo: 3,
+    // },
     {
       id: "script-src",
       name: "Script tag src attribute",
