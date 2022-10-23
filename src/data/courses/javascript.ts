@@ -326,7 +326,6 @@ const javascriptCourse: Course = {
         },
       ],
     },
-
     {
       id: "vs-code",
       name: "Writing Javascript files in VS Code",
@@ -343,6 +342,7 @@ const javascriptCourse: Course = {
     {
       id: "flowchart",
       name: "Flowchart",
+      description: "Learn to make flowchart and algorithmic thinking.",
       weekNo: 3,
       resources: [
         {
@@ -384,55 +384,98 @@ const javascriptCourse: Course = {
       ],
     },
     {
-      id: "functions",
-      name: "Functions",
-      description: "Syntax, arguments, scope and return value",
-      weekNo: 3,
-      resources: [
-        {
-          id: "functions",
-          label: "Functions",
-          type: "video",
-          url: "https://www.youtube.com/watch?v=XgKsD6Zwvlc",
-        },
-      ],
-    },
-    {
-      id: "comments",
-      name: "Comments",
-      weekNo: 3,
-    },
-    {
-      id: "strings",
-      name: "Strings",
-      description: "Single and double quotes",
-      weekNo: 3,
-    },
-    {
-      id: "boolean",
-      name: "Boolean",
-      description:
-        "Boolean and logical comparators and “if” (equal, strict equal, less than, greater than, and, or)",
-      weekNo: 3,
-      resources: [
-        {
-          id: "boolean",
-          label: "Boolean logic with if statements",
-          type: "video",
-          url: "https://www.youtube.com/watch?v=SxTp8j-fMMY",
-        },
-      ],
-    },
-    {
-      id: "comments",
-      name: "Comments",
-      weekNo: 3,
-    },
-    {
       id: "script-tag",
-      name: "Script HTML tag",
+      name: "How to Run JS",
+      description: "In this section we are going to run a javascript code by including it into HTML file.",
       weekNo: 3,
+      resources: [
+        {
+          id: "res-1",
+          label: "Linking the javascript file with HTML file",
+          type: "link",
+          url: "https://javascript.info/hello-world",
+        },
+      ],
     },
+    {
+      id: "code-structure",
+      name: "JS Code structure",
+      weekNo: 3,
+      resources: [
+        {
+          id: "res-1",
+          label: "javascript.info - Code structure",
+          type: "link",
+          url: "https://javascript.info/structure",
+        },
+      ],
+    },
+    {
+      id: "communication-with-user",
+      name: "Communication with user",
+      weekNo: 3,
+      resources: [
+        {
+          id: "res-1",
+          label: "javascript.info - Interaction: alert, prompt, confirm",
+          type: "link",
+          url: "https://javascript.info/alert-prompt-confirm",
+        },
+      ],
+    },
+    // {
+    //   id: "functions",
+    //   name: "Functions",
+    //   description: "Syntax, arguments, scope and return value",
+    //   weekNo: 3,
+    //   resources: [
+    //     {
+    //       id: "functions",
+    //       label: "Functions",
+    //       type: "video",
+    //       url: "https://www.youtube.com/watch?v=XgKsD6Zwvlc",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: "comments",
+    //   name: "Comments",
+    //   weekNo: 3,
+    // },
+    // {
+    //   id: "strings",
+    //   name: "Strings",
+    //   description: "Single and double quotes",
+    //   weekNo: 3,
+    //   resources: [
+    //     {
+    //       id: "functions",
+    //       label: "Functions",
+    //       type: "video",
+    //       url: "https://www.youtube.com/watch?v=XgKsD6Zwvlc",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: "boolean",
+    //   name: "Boolean",
+    //   description:
+    //     "Boolean and logical comparators and “if” (equal, strict equal, less than, greater than, and, or)",
+    //   weekNo: 3,
+    //   resources: [
+    //     {
+    //       id: "boolean",
+    //       label: "Boolean logic with if statements",
+    //       type: "video",
+    //       url: "https://www.youtube.com/watch?v=SxTp8j-fMMY",
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: "comments",
+    //   name: "Comments",
+    //   weekNo: 3,
+    // },
     {
       id: "script-src",
       name: "Script tag src attribute",
