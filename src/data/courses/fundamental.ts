@@ -5,278 +5,529 @@ const fundamentalCourse: Course = {
   id: "fundamental",
   name: "Web Fundamentals",
   tag: [tags.programming],
-  color: "red",
+  color: "orange",
   lessons: [
+    
     {
-      id: "w1a",
+      id: "intro",
+      name: "Introduction and acquaintance",
       weekNo: 1,
-      name: "Computer hardware",
     },
     {
-      id: "w1b",
-      weekNo: 1,
-      name: "Computer software",
-    },
-    {
-      id: "w2a",
+      id: "hardware",
       weekNo: 2,
-      name: "Computer networks",
+      name: "Computer hardware",
+      resources: [
+        {
+          id: "slide1",
+          label: "Computer hardware slide",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video1",
+          label: "Computer hardware video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+      ],
     },
     {
-      id: "w2b",
+      id: "hardware-a",
+      name: "what is a computer?",
+      weekNo: 2,
+    },
+    {
+      id: "hardware-b",
+      name: "Input / Output devices of the computer.",
+      weekNo: 2,
+    },
+    {
+      id: "hardware-c",
+      name: "Part of important component of the computer.",
+      weekNo: 2,
+    },
+    {
+      id: "hardware-d",
+      name: "Manage & Monitoring process of system.",
+      weekNo: 2,
+    },
+    {
+      id: "math",
+      name: "Math",
       weekNo: 3,
-      name: "How Internet works?",
       resources: [
         {
-          id: "1",
-          label: "How does the Internet work?",
-          url: "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work",
-          type: "link",
-        },
-        {
-          id: "2",
-          label: "What are hyperlinks?",
-          url: "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_hyperlinks",
-          type: "link",
-        },
-        {
-          id: "3",
-          label: "What is a Domain Name?",
-          url: "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_domain_name",
-          type: "link",
-        },
-        {
-          id: "4",
-          label: "What is a URL?",
-          url: "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL",
-          type: "link",
-        },
-        {
-          id: "5",
-          label: "HTTP GET Method",
-          url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET",
-          type: "link",
-        },
-        {
-          id: "6",
-          label: "HTTP POST Method",
-          url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST",
-          type: "link",
-        },
-        {
-          id: "7",
-          label: "HTTP response status codes",
-          url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status",
-          type: "link",
+          id: "video2",
+          label: "Math video",
+          url: "",
+          type: "video",
         },
       ],
     },
     {
-      id: "w6a",
+      id: "math-a",
+      name: "Basic - binary operation.",
+      weekNo: 3,
+    },
+    {
+      id: "math-aa",
+      name: "Math",
+      weekNo: 4,
+      resources: [
+        {
+          id: "video3",
+          label: "Math video",
+          url: "",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment-a",
+          label: "Assignment",
+          url: "",
+          type: "file",
+        },
+      ],
+    },
+    {
+      id: "math-a",
+      name: "if and or xor not.",
+      weekNo: 4,
+    },
+    {
+      id: "network",
+      name: "Network",
+      weekNo: 5,
+      resources: [
+        {
+          id: "slide2",
+          label: "Network slide",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video4",
+          label: "Network video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
+        },
+      ],
+    },
+    {
+      id: "vm",
+      name: "Server",
       weekNo: 6,
-      name: "What is Web?",
+      resources: [
+        {
+          id: "slide3",
+          label: "Server silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video5",
+          label: "server video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
+        },
+      ],
     },
     {
-      id: "w7a",
+      id: "network-a",
+      name: "http/https",
       weekNo: 7,
-      name: "What does backend mean?",
+      resources: [
+        {
+          id: "slide4",
+          label: "Http/Https silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video6",
+          label: "Http/Https video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
+        },
+      ],
+      
     },
     {
-      id: "w10a",
-      weekNo: 10,
+      id: "sw",
+      weekNo: 8,
+      name: "Backend/Frontend",
+      resources: [
+        {
+          id: "slide5",
+          label: "Backend/Frontend silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video6",
+          label: "Backend/Frontend video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
+        },
+      ],
+    },
+    {
+      id: "network-c",
       name: "What is API?",
-      resources: [
-        {
-          id: "1",
-          label: "What is API",
-          url: "https://www.ibm.com/cloud/learn/api",
-          type: "link",
-        },
-      ],
-    },
-    {
-      id: "w10b",
       weekNo: 10,
-      name: "RESTful API",
+      resources: [
+        {
+          id: "slide6",
+          label: "What is API? silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video7",
+          label: "What is API? video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
+        },
+      ],
     },
     {
-      id: "w11a",
+      id: "sw-a",
+      name: "Operation system",
       weekNo: 11,
-      name: "Linux",
+      resources: [
+        {
+          id: "slide7",
+          label: "Operation system silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video8",
+          label: "Operation system video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
+        },
+      ],
     },
     {
-      id: "w11b",
-      weekNo: 11,
-      name: "Running Linux in a virtual machine",
-    },
-    {
-      id: "w12a",
+      id: "sw-b",
+      name: "Security",
       weekNo: 12,
-      name: "Linux users and groups",
       resources: [
         {
-          id: "1",
-          label: "How to manage users and groups in Linux",
-          url: "https://www.redhat.com/sysadmin/linux-user-group-management",
-          type: "link",
+          id: "slide8",
+          label: "Security silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video9",
+          label: "Security video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
         },
       ],
     },
     {
-      id: "w12b",
-      weekNo: 12,
-      name: "Linux permissions",
+      id: "vm-a",
+      name: "VPS & SSH",
+      weekNo: 13,
       resources: [
         {
-          id: "1",
-          label:
-            "How to manage Linux permissions for users, groups, and others",
-          url: "https://www.redhat.com/sysadmin/manage-permissions",
-          type: "link",
+          id: "slide9",
+          label: "VPS & SSH silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video10",
+          label: "VPS & SSH video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
         },
       ],
     },
     {
-      id: "w14b",
+      id: "linux",
+      name: "Familiarity with Linux commands - 1",
       weekNo: 14,
-      name: "Install packages using apt",
       resources: [
         {
-          id: "1",
-          label:
-            "How to Use Apt-Get to Install Programs in Ubuntu from the Command Line",
-          url: "https://www.howtogeek.com/63997/how-to-install-programs-in-ubuntu-in-the-command-line/",
-          type: "link",
+          id: "slide10",
+          label: "Familiarity with Linux commands silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video11",
+          label: "Familiarity with Linux commands video",
+          description: "please go to website",
+          url:"",
+          type: "video",
         },
       ],
-    },
-    {
-      id: "w14c",
-      weekNo: 14,
-      name: "Monitor processes",
-      resources: [
+      exercises: [
         {
-          id: "1",
-          label: "ps(1)",
-          url: "https://linux.die.net/man/1/ps",
-          type: "link",
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
         },
         {
-          id: "2",
-          label: "Linux PS command with examples",
-          url: "https://en.linuxteaching.com/article/linux_ps_command_with_examples",
-          type: "link",
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
         },
       ],
+      
     },
     {
-      id: "w14d",
-      weekNo: 14,
-      name: "Terminate a process",
-      resources: [
-        {
-          id: "1",
-          label: "kill(1)",
-          url: "https://linux.die.net/man/1/kill",
-          type: "link",
-        },
-        {
-          id: "2",
-          label: "killall(1)",
-          url: "https://linux.die.net/man/1/killall",
-          type: "link",
-        },
-      ],
-    },
-    {
-      id: "w14e",
-      weekNo: 14,
-      name: "Pipes",
-      resources: [
-        {
-          id: "1",
-          label: "pipeline in linux/unix with examples",
-          url: "https://www.linuxcommands.site/linux-system-commands/pipeline-in-linux-unix-with-examples/",
-          type: "link",
-        },
-        {
-          id: "2",
-          label: "How Do You Pipe the Output of a Command to a File in Linux",
-          url: "https://linuxhint.com/how-do-you-pipe-the-output-of-a-command-to-a-file-in-linux/",
-          type: "link",
-        },
-      ],
-    },
-    {
-      id: "w14f",
-      weekNo: 14,
-      name: "grep",
-      resources: [
-        {
-          id: "1",
-          label: "How To Use grep Command In Linux/UNIX",
-          url: "https://phoenixnap.com/kb/grep-command-linux-unix-examples",
-          type: "link",
-        },
-      ],
-    },
-    {
-      id: "w14g",
-      weekNo: 14,
-      name: "find",
-      resources: [
-        {
-          id: "1",
-          label: "How to Use the find Command in Linux",
-          url: "https://www.howtogeek.com/771399/how-to-use-the-find-command-in-linux/",
-          type: "link",
-        },
-      ],
-    },
-    {
-      id: "w15a",
+      id: "linux-a",
+      name: "Familiarity with Linux commands - 2",
       weekNo: 15,
-      name: "bash scripts",
       resources: [
         {
-          id: "1",
-          label: "How to Create and Use Bash Scripts",
-          url: "https://www.taniarascia.com/how-to-create-and-use-bash-scripts/",
-          type: "link",
+          id: "slide12",
+          label: "Familiarity with Linux commands silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video13",
+          label: "Familiarity with Linux commands video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
         },
       ],
     },
     {
-      id: "w15b",
-      weekNo: 15,
-      name: "Regular Expressions",
-      resources: [
-        {
-          id: "1",
-          label: "Linux Regular Expression",
-          url: "https://www.educba.com/linux-regular-expression/",
-          type: "link",
-        },
-      ],
-    },
-    {
-      id: "w15c",
-      weekNo: 15,
-      name: "Environment Variables",
-      resources: [
-        {
-          id: "1",
-          label: "How to Set Environment Variables in Linux",
-          url: "https://phoenixnap.com/kb/linux-set-environment-variable",
-          type: "link",
-        },
-      ],
-    },
-    {
-      id: "w16c",
+      id: "linux-b",
+      name: "VIM editor",
       weekNo: 16,
-      name: "Introduction to Python",
-    }
+      resources: [
+        {
+          id: "slide12",
+          label: "VIM editor silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video13",
+          label: "VIM editor video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
+        },
+      ],
+    },
+    {
+      id: "vm-b",
+      name: "Nginx",
+      weekNo: 17,
+      resources: [
+        {
+          id: "slide13",
+          label: "Nginx silde",
+          description: "please go to website",
+          url:"",
+          type: "slide",
+        },
+        {
+          id: "video14",
+          label: "Nginx video",
+          description: "please go to website",
+          url:"",
+          type: "video",
+        },
+      ],
+      exercises: [
+        {
+          id: "assignment",
+          label: "Journal",
+          url: "",
+          type: "file",
+        },
+        {
+          id: "assignment-a",
+          label: "Discussion forum",
+          url: "",
+          type: "file",
+        },
+      ],
+    },
   ],
 };
 
