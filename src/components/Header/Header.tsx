@@ -105,7 +105,7 @@ const Header = () => {
                 <ListItemIcon>
                   <CalendarViewWeekIcon />
                 </ListItemIcon>
-                <ListItemText primary="Week View Schedule" />
+                <ListItemText primary="Weekly Schedule" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -125,7 +125,7 @@ const Header = () => {
                 <ListItemIcon>
                   <GitHubIcon />
                 </ListItemIcon>
-                <ListItemText primary="GitHub repository" />
+                <ListItemText primary="Github repository" />
               </ListItemButton>
             </ListItem>
           </List>

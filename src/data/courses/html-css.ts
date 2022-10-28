@@ -7,12 +7,36 @@ const databaseCourse: Course = {
   description: "Basic HTML/CSS",
   tag: [tags.frontend],
   color: "lightGreen",
+  presentations: [
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/js/week1",
+      type: "slide",
+      weekNo: 1,
+    },
+  ],
   lessons: [
+    {
+      id: "intro",
+      name: "History of Internet and Web",
+      weekNo: 1,
+    },
+    {
+      id: "what",
+      name: "What is HTML, CSS and JS?",
+      weekNo: 1,
+    },
+    {
+      id: "evolve",
+      name: "How does the Web evolve?",
+      weekNo: 1,
+    },
     {
       id: "basic-syntax",
       name: "Basic syntax",
       description: "Basic HTML tags: h1, h1, p, comment, main and nesting.",
-      weekNo: 1,
+      weekNo: 2,
       exercises: [
         {
           id: "free1",

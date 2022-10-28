@@ -16,6 +16,8 @@ import { useRouter } from "next/router";
 import theme from "../../theme/theme";
 import compact from "lodash/compact";
 import ExtensionIcon from "@mui/icons-material/Extension";
+import OndemandVideoOutlinedIcon from "@mui/icons-material/OndemandVideoOutlined";
+import Link from "next/link";
 
 const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
   const colors = useColors();
@@ -75,8 +77,6 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
     removeQueryParam("lesson");
   }, [lessonIdParam, router]);
 
-  console.log({ expanded });
-
   return (
     <div className={styles.syllabus}>
       {lessonsGroupByWeek?.map((week, index) => {
@@ -86,16 +86,23 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
         const exercises = compact(
           week.lessons?.map((lesson) => lesson.exercises).flat(2)
         ).concat(weekExercises);
+        const presentations =
+          course?.presentations?.filter(
+            (item) => item.weekNo === week.weekNo
+          ) || [];
         return (
-          <div key={week.weekNo + index}>
-            <Typography
-              id={`week-no-${week.weekNo}`}
-              color="text.secondary"
-              className={styles.weekTitle}
-              variant="h5"
-            >
-              Week {week.weekNo}
-            </Typography>
+          <div key={week.weekNo + index} className={styles.weekContainer}>
+            <Link href={router.asPath + "&weekNo=" + week.weekNo} passHref>
+              <Typography
+                id={`week-no-${week.weekNo}`}
+                color="text.secondary"
+                className={styles.weekTitle}
+                variant="h5"
+                component="a"
+              >
+                Week {week.weekNo}
+              </Typography>
+            </Link>
             <div>
               {week.lessons?.map((lesson, index) => {
                 const canCollapse =
@@ -164,7 +171,7 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1bh-content"
-                    className={styles.exercises}
+                    classes={{ content: styles.extra }}
                     id="panel1bh-header"
                     sx={{
                       bgcolor:
@@ -181,6 +188,34 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <ResourcesList resources={exercises} />
+                  </AccordionDetails>
+                </Accordion>
+              )}
+              {Boolean(presentations.length) && (
+                <Accordion
+                  expanded={expanded === week.weekNo + "-presentations"}
+                  onChange={handleChange(week.weekNo + "-presentations")}
+                >
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1bh-content"
+                    classes={{ content: styles.extra }}
+                    id="panel1bh-header"
+                    sx={{
+                      bgcolor:
+                        expanded === week.weekNo + "-presentations"
+                          ? theme.palette.common.grey[200]
+                          : "unset",
+                    }}
+                  >
+                    <OndemandVideoOutlinedIcon
+                      htmlColor={theme.palette.primary.main}
+                      className={styles.puzzleIcon}
+                    />
+                    <Typography color="primary.main">Presentations</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <ResourcesList resources={presentations} />
                   </AccordionDetails>
                 </Accordion>
               )}

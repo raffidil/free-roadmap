@@ -32,6 +32,7 @@ export type Course = {
   tag?: Array<Tag>;
   resources?: Array<Resource>;
   exercises?: Array<Resource>;
+  presentations?: Array<Resource>;
   color?: Color;
   data?: { [key: string]: any };
 };

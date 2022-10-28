@@ -56,7 +56,7 @@ const Dashboard: NextPage<{
     <div className={styles.container}>
       <div className={styles.headerContainer}>
         <Typography variant={isMobile ? "h5" : "h4"}>
-          Week View Schedule
+          Weekly Schedule
         </Typography>
         <Paper>
           <IconButton onClick={onSwiperPrev} disabled={swiperObj?.isBeginning}>
