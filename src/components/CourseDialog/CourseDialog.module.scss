@@ -40,8 +40,15 @@ button.closeButton {
   display: flex;
   padding: 12px;
   flex-direction: column;
+  .weekContainer {
+    display: flex;
+    flex-direction: column;
+  }
   .weekTitle {
     margin: 24px 0px 12px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .title {
     margin: 8px 0px 12px;

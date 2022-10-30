@@ -17,6 +17,7 @@ import theme from "../../theme/theme";
 import compact from "lodash/compact";
 import ExtensionIcon from "@mui/icons-material/Extension";
 import OndemandVideoOutlinedIcon from "@mui/icons-material/OndemandVideoOutlined";
+import Link from "next/link";
 
 const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
   const colors = useColors();
@@ -76,8 +77,6 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
     removeQueryParam("lesson");
   }, [lessonIdParam, router]);
 
-  console.log({ expanded });
-
   return (
     <div className={styles.syllabus}>
       {lessonsGroupByWeek?.map((week, index) => {
@@ -92,15 +91,18 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
             (item) => item.weekNo === week.weekNo
           ) || [];
         return (
-          <div key={week.weekNo + index}>
-            <Typography
-              id={`week-no-${week.weekNo}`}
-              color="text.secondary"
-              className={styles.weekTitle}
-              variant="h5"
-            >
-              Week {week.weekNo}
-            </Typography>
+          <div key={week.weekNo + index} className={styles.weekContainer}>
+            <Link href={router.asPath + "&weekNo=" + week.weekNo} passHref>
+              <Typography
+                id={`week-no-${week.weekNo}`}
+                color="text.secondary"
+                className={styles.weekTitle}
+                variant="h5"
+                component="a"
+              >
+                Week {week.weekNo}
+              </Typography>
+            </Link>
             <div>
               {week.lessons?.map((lesson, index) => {
                 const canCollapse =
@@ -169,7 +171,7 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1bh-content"
-                    className={styles.extra}
+                    classes={{ content: styles.extra }}
                     id="panel1bh-header"
                     sx={{
                       bgcolor:
@@ -197,7 +199,7 @@ const Syllabus: React.FC<{ course?: Course }> = ({ course }) => {
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1bh-content"
-                    className={styles.extra}
+                    classes={{ content: styles.extra }}
                     id="panel1bh-header"
                     sx={{
                       bgcolor:
