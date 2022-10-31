@@ -11,9 +11,23 @@ const databaseCourse: Course = {
     {
       id: "slides",
       label: "Slides",
-      url: "https://js-presentations.vercel.app/presentation/js/week1",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week1",
       type: "slide",
       weekNo: 1,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week2",
+      type: "slide",
+      weekNo: 2,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week3",
+      type: "slide",
+      weekNo: 3,
     },
   ],
   lessons: [
