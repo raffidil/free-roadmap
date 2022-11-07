@@ -29,6 +29,20 @@ const databaseCourse: Course = {
       type: "slide",
       weekNo: 3,
     },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week4",
+      type: "slide",
+      weekNo: 4,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week5",
+      type: "slide",
+      weekNo: 5,
+    },
   ],
   lessons: [
     {
@@ -147,6 +161,14 @@ const databaseCourse: Course = {
       name: "Body and head",
       description: "Footer, body, head, title, doctype, meta",
       weekNo: 5,
+      exercises: [
+        {
+          id: "free5",
+          label: "Assignment 1",
+          url: "https://js-presentations.vercel.app/presentation/basic-frontend/week5/assignment.html",
+          type: "link",
+        },
+      ],
     },
   ],
 };
