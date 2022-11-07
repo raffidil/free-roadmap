@@ -534,16 +534,85 @@ const javascriptCourse: Course = {
       id: "loops",
       name: "Loops (for, while)",
       weekNo: 5,
+      resources: [
+        {
+          id: "1",
+          label: "javascript.info - Loops: while and for",
+          type: "link",
+          url: "https://javascript.info/while-for",
+        },
+      ],
+      exercises: [
+        {
+          id: "1",
+          label: "FreeCodeCamp - Iterate with JavaScript While Loops",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-while-loops",
+        },
+        {
+          id: "2",
+          label: "FreeCodeCamp - Iterate with JavaScript For Loops",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-for-loops",
+        },
+        {
+          id: "3",
+          label: "FreeCodeCamp - Iterate Odd Numbers With a For Loop",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-odd-numbers-with-a-for-loop",
+        },
+        {
+          id: "4",
+          label: "FreeCodeCamp - Count Backwards With a For Loop",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/count-backwards-with-a-for-loop",
+        },
+        {
+          id: "5",
+          label: "FreeCodeCamp - Iterate Through an Array with a For Loop",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-through-an-array-with-a-for-loop",
+        },
+        {
+          id: "6",
+          label: "FreeCodeCamp - Iterate with JavaScript Do...While Loops",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/iterate-with-javascript-do---while-loops",
+        },
+      ],
     },
     {
       id: "arrays",
       name: "Introduction to arrays",
-      weekNo: 5,
-    },
-    {
-      id: "nested-arrays",
-      name: "Nested arrays",
       weekNo: 6,
+      resources: [
+        {
+          id: "1",
+          label: "Programming with Mosh -  JavaScript Arrays",
+          type: "video",
+          url: "https://youtu.be/oigfaZ5ApsM",
+        },
+        {
+          id: "2",
+          label: "javascript.info - Arrays",
+          type: "link",
+          url: "https://javascript.info/array",
+        },
+      ],
+      exercises: [
+        {
+          id: "1",
+          label: "FreeCodeCamp - Store Multiple Values in one Variable using JavaScript Arrays",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/store-multiple-values-in-one-variable-using-javascript-arrays",
+        },
+        {
+          id: "2",
+          label: "FreeCodeCamp - Store Multiple Values in one Variable using JavaScript Arrays",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/store-multiple-values-in-one-variable-using-javascript-arrays",
+        },
+      ],
     },
     {
       id: "array-method",
