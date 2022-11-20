@@ -43,6 +43,20 @@ const databaseCourse: Course = {
       type: "slide",
       weekNo: 5,
     },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week6",
+      type: "slide",
+      weekNo: 6,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week7",
+      type: "slide",
+      weekNo: 7,
+    },
   ],
   lessons: [
     {
@@ -169,6 +183,89 @@ const databaseCourse: Course = {
           type: "link",
         },
       ],
+    },
+    {
+      id: "forms-b",
+      name: "Style tag",
+      weekNo: 6,
+      exercises: [
+        {
+          id: "free5",
+          label: "Cafe menu project: steps 1 to the 30.",
+          url: "https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-basic-css-by-building-a-cafe-menu/",
+          type: "link",
+        },
+      ],
+    },
+    {
+      id: "style-syntax",
+      name: "Basic CSS syntax",
+      weekNo: 6,
+    },
+    {
+      id: "center",
+      name: "margin-left and margin-right",
+      weekNo: 6,
+    },
+    {
+      id: "text-align",
+      name: "Multiple selectors",
+      weekNo: 6,
+    },
+    {
+      id: "text",
+      name: "text-align",
+      weekNo: 6,
+    },
+    {
+      id: "color",
+      name: "background-color",
+      weekNo: 6,
+    },
+    {
+      id: "width",
+      name: "width",
+      weekNo: 6,
+    },
+    {
+      id: "css-file",
+      name: "Separate CSS file from HTML",
+      weekNo: 6,
+    },
+    {
+      id: "class",
+      name: "CSS class",
+      weekNo: 7,
+    },
+    {
+      id: "art",
+      name: "Article and hr element",
+      weekNo: 7,
+    },
+    {
+      id: "nested",
+      name: "Nested selector",
+      weekNo: 7,
+    },
+    {
+      id: "image-css",
+      name: "background-image",
+      weekNo: 7,
+    },
+    {
+      id: "padding",
+      name: "padding, max-width, font-family, font-style and font-size",
+      weekNo: 7,
+    },
+    {
+      id: "comment",
+      name: "CSS comment",
+      weekNo: 7,
+    },
+    {
+      id: "pseudo",
+      name: "Pseudo classes",
+      weekNo: 7,
     },
   ],
 };
