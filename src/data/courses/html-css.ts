@@ -43,6 +43,20 @@ const databaseCourse: Course = {
       type: "slide",
       weekNo: 5,
     },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week6",
+      type: "slide",
+      weekNo: 6,
+    },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week7",
+      type: "slide",
+      weekNo: 7,
+    },
   ],
   lessons: [
     {
@@ -217,6 +231,41 @@ const databaseCourse: Course = {
       id: "css-file",
       name: "Separate CSS file from HTML",
       weekNo: 6,
+    },
+    {
+      id: "class",
+      name: "CSS class",
+      weekNo: 7,
+    },
+    {
+      id: "art",
+      name: "Article and hr element",
+      weekNo: 7,
+    },
+    {
+      id: "nested",
+      name: "Nested selector",
+      weekNo: 7,
+    },
+    {
+      id: "image-css",
+      name: "background-image",
+      weekNo: 7,
+    },
+    {
+      id: "padding",
+      name: "padding, max-width, font-family, font-style and font-size",
+      weekNo: 7,
+    },
+    {
+      id: "comment",
+      name: "CSS comment",
+      weekNo: 7,
+    },
+    {
+      id: "pseudo",
+      name: "Pseudo classes",
+      weekNo: 7,
     },
   ],
 };
