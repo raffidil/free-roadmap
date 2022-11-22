@@ -584,7 +584,7 @@ const javascriptCourse: Course = {
     {
       id: "arrays",
       name: "Introduction to arrays",
-      weekNo: 6,
+      weekNo: 7,
       resources: [
         {
           id: "1",
@@ -608,122 +608,154 @@ const javascriptCourse: Course = {
         },
         {
           id: "2",
-          label: "FreeCodeCamp - Store Multiple Values in one Variable using JavaScript Arrays",
+          label: "FreeCodeCamp - Access Array Data with Indexes",
           type: "link",
-          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/store-multiple-values-in-one-variable-using-javascript-arrays",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/access-array-data-with-indexes",
+        },
+        {
+          id: "3",
+          label: "FreeCodeCamp - Modify Array Data With Indexes",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/modify-array-data-with-indexes",
         },
       ],
     },
     {
       id: "array-method",
       name: "Array methods",
-      description: "Pop, push, shift, unshift, splice",
-      weekNo: 6,
+      description: "Pop, push, shift, unshift, length",
+      weekNo: 7,
+      exercises: [
+        {
+          id: "1",
+          label: "FreeCodeCamp - Manipulate Arrays With push()",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-push",
+        },
+        {
+          id: "2",
+          label: "FreeCodeCamp - Manipulate Arrays With pop()",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-pop",
+        },
+        {
+          id: "3",
+          label: "FreeCodeCamp - Manipulate Arrays With shift()",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-shift",
+        },
+        {
+          id: "4",
+          label: "FreeCodeCamp - Manipulate Arrays With unshift()",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-unshift",
+        },
+      ]
     },
     {
       id: "nested-loop",
       name: "Nested loops",
       weekNo: 6,
     },
-    {
-      id: "sort",
-      name: "Sorting algorithms",
-      weekNo: 7,
-    },
-    {
-      id: "object",
-      name: "Objects",
-      weekNo: 7,
-    },
-    {
-      id: "dom",
-      name: "DOM Manipulation",
-      description: "Styles and innerText",
-      weekNo: 10,
-    },
-    {
-      id: "events",
-      name: "Events",
-      description: "onClick and onMouseOver",
-      weekNo: 10,
-    },
-    {
-      id: "math-obj",
-      name: "Math object",
-      weekNo: 10,
-    },
-    {
-      id: "dom-add-class",
-      name: "DOM: Add and remove classes",
-      weekNo: 11,
-    },
-    {
-      id: "dom-input",
-      name: "DOM: Read input values",
-      weekNo: 11,
-    },
-    {
-      id: "date",
-      name: "Date object",
-      weekNo: 11,
-    },
-    {
-      id: "timer",
-      name: "Timers",
-      description: "setTimeout and setInterval",
-      weekNo: 12,
-    },
-    {
-      id: "callback",
-      name: "Callback and anonymous functions",
-      weekNo: 12,
-    },
-    {
-      id: "template-literal",
-      name: "Template literal",
-      weekNo: 12,
-    },
-    {
-      id: "arrow",
-      name: "Arrow functions",
-      weekNo: 12,
-    },
-    {
-      id: "fetch",
-      name: "Fetch API",
-      weekNo: 13,
-    },
-    {
-      id: "promise",
-      name: "Promises",
-      description: "Using then/catch syntax",
-      weekNo: 13,
-    },
-    {
-      id: "fetch-delete",
-      name: "Implement add/delete with API",
-      description: `Catch API errors and display them
-Use forEach
-Use addEventListener
-Use select HTML tag
-`,
-      weekNo: 14,
-    },
-    {
-      id: "attr",
-      name: "Read HTML attributes",
-      weekNo: 14,
-    },
-    {
-      id: "local",
-      name: "LocalStorage",
-      weekNo: 14,
-    },
-    {
-      id: "weather",
-      name: "Fetch from weather API",
-      weekNo: 14,
-    },
+//     {
+//       id: "sort",
+//       name: "Sorting algorithms",
+//       weekNo: 7,
+//     },
+//     {
+//       id: "object",
+//       name: "Objects",
+//       weekNo: 7,
+//     },
+//     {
+//       id: "dom",
+//       name: "DOM Manipulation",
+//       description: "Styles and innerText",
+//       weekNo: 10,
+//     },
+//     {
+//       id: "events",
+//       name: "Events",
+//       description: "onClick and onMouseOver",
+//       weekNo: 10,
+//     },
+//     {
+//       id: "math-obj",
+//       name: "Math object",
+//       weekNo: 10,
+//     },
+//     {
+//       id: "dom-add-class",
+//       name: "DOM: Add and remove classes",
+//       weekNo: 11,
+//     },
+//     {
+//       id: "dom-input",
+//       name: "DOM: Read input values",
+//       weekNo: 11,
+//     },
+//     {
+//       id: "date",
+//       name: "Date object",
+//       weekNo: 11,
+//     },
+//     {
+//       id: "timer",
+//       name: "Timers",
+//       description: "setTimeout and setInterval",
+//       weekNo: 12,
+//     },
+//     {
+//       id: "callback",
+//       name: "Callback and anonymous functions",
+//       weekNo: 12,
+//     },
+//     {
+//       id: "template-literal",
+//       name: "Template literal",
+//       weekNo: 12,
+//     },
+//     {
+//       id: "arrow",
+//       name: "Arrow functions",
+//       weekNo: 12,
+//     },
+//     {
+//       id: "fetch",
+//       name: "Fetch API",
+//       weekNo: 13,
+//     },
+//     {
+//       id: "promise",
+//       name: "Promises",
+//       description: "Using then/catch syntax",
+//       weekNo: 13,
+//     },
+//     {
+//       id: "fetch-delete",
+//       name: "Implement add/delete with API",
+//       description: `Catch API errors and display them
+// Use forEach
+// Use addEventListener
+// Use select HTML tag
+// `,
+//       weekNo: 14,
+//     },
+//     {
+//       id: "attr",
+//       name: "Read HTML attributes",
+//       weekNo: 14,
+//     },
+//     {
+//       id: "local",
+//       name: "LocalStorage",
+//       weekNo: 14,
+//     },
+//     {
+//       id: "weather",
+//       name: "Fetch from weather API",
+//       weekNo: 14,
+//     },
   ],
 };
 
