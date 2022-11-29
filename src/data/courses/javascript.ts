@@ -582,6 +582,11 @@ const javascriptCourse: Course = {
       ],
     },
     {
+      id: "nested-loop",
+      name: "Nested loops",
+      weekNo: 6,
+    },
+    {
       id: "arrays",
       name: "Introduction to arrays",
       weekNo: 7,
@@ -653,10 +658,77 @@ const javascriptCourse: Course = {
       ]
     },
     {
-      id: "nested-loop",
-      name: "Nested loops",
-      weekNo: 6,
+      id: "function",
+      name: "Functions",
+      description: "Intro to using functions to organize your code.",
+      weekNo: 8,
+      resources: [
+        {
+          id: "2",
+          label: "javascript.info - Functions",
+          description: "You don't need to read the <Default values> part",
+          type: "link",
+          url: "https://javascript.info/function-basics",
+        },
+      ],
+      exercises: [
+        {
+          id: "1",
+          label: "FreeCodeCamp - Write Reusable JavaScript with Functions",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/write-reusable-javascript-with-functions",
+        },
+        {
+          id: "2",
+          label: "FreeCodeCamp - Passing Values to Functions with Arguments",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/passing-values-to-functions-with-arguments",
+        },
+        {
+          id: "3",
+          label: "FreeCodeCamp - Return a Value from a Function with Return",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/return-a-value-from-a-function-with-return",
+        },
+        {
+          id: "4",
+          label: "FreeCodeCamp - Global Scope and Functions",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-scope-and-functions",
+        },
+        {
+          id: "5",
+          label: "FreeCodeCamp - Local Scope and Functions",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/local-scope-and-functions",
+        },
+        {
+          id: "6",
+          label: "FreeCodeCamp - Global vs. Local Scope in Functions",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-vs--local-scope-in-functions",
+        },
+        {
+          id: "7",
+          label: "FreeCodeCamp - Understanding Undefined Value returned from a Function",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/understanding-undefined-value-returned-from-a-function",
+        },
+        {
+          id: "8",
+          label: "FreeCodeCamp - Assignment with a Returned Value",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/assignment-with-a-returned-value",
+        },
+        {
+          id: "9",
+          label: "FreeCodeCamp - Stand in Line",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/stand-in-line",
+        },
+      ]
     },
+
 //     {
 //       id: "sort",
 //       name: "Sorting algorithms",
