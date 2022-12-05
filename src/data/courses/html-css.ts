@@ -64,6 +64,13 @@ const databaseCourse: Course = {
       type: "slide",
       weekNo: 7,
     },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week8",
+      type: "slide",
+      weekNo: 8,
+    },
   ],
   lessons: [
     {
@@ -323,6 +330,39 @@ const databaseCourse: Course = {
       id: "atr-selector",
       name: "CSS attribute selector",
       weekNo: 7,
+    },
+    {
+      id: "box",
+      name: "CSS Box model",
+      weekNo: 8,
+      exercises: [
+        {
+          id: "free7",
+          label: "About box model",
+          url: "https://www.w3schools.com/css/css_boxmodel.asp",
+          type: "link",
+        },
+      ],
+    },
+    {
+      id: "css-short",
+      name: "CSS shorthands",
+      weekNo: 8,
+    },
+    {
+      id: "css-short",
+      name: "border-radius",
+      weekNo: 8,
+    },
+    {
+      id: "css-short",
+      name: "box-shadow",
+      weekNo: 8,
+    },
+    {
+      id: "css-short",
+      name: "overflow",
+      weekNo: 8,
     },
   ],
 };
