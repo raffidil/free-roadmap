@@ -728,6 +728,94 @@ const javascriptCourse: Course = {
         },
       ]
     },
+    {
+      id: "object",
+      name: "Object",
+      description: "Intro to using js objects .",
+      weekNo: 9,
+      resources: [
+        {
+          id: "1",
+          label: "javascript.info - Objects",
+          type: "link",
+          url: "https://javascript.info/object",
+        },
+      ],
+      exercises: [
+        {
+          id: "1",
+          label: "FreeCodeCamp - Build JavaScript Objects",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/build-javascript-objects",
+        },
+        {
+          id: "2",
+          label: "FreeCodeCamp - Accessing Object Properties with Dot Notation",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-dot-notation",
+        },
+        {
+          id: "3",
+          label: "FreeCodeCamp - Accessing Object Properties with Bracket Notation",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-bracket-notation",
+        },
+        {
+          id: "4",
+          label: "FreeCodeCamp - Accessing Object Properties with Variables",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-variables",
+        },
+        {
+          id: "5",
+          label: "FreeCodeCamp - Updating Object Properties",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/updating-object-properties",
+        },
+        {
+          id: "6",
+          label: "FreeCodeCamp - Add New Properties to a JavaScript Object",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/add-new-properties-to-a-javascript-object",
+        },
+        {
+          id: "7",
+          label: "FreeCodeCamp - Delete Properties from a JavaScript Object",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/delete-properties-from-a-javascript-object",
+        },
+        {
+          id: "8",
+          label: "FreeCodeCamp - Using Objects for Lookups",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/using-objects-for-lookups",
+        },
+        {
+          id: "9",
+          label: "FreeCodeCamp - Manipulating Complex Objects",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulating-complex-objects",
+        },
+        {
+          id: "10",
+          label: "FreeCodeCamp - Accessing Nested Objects",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-nested-objects",
+        },
+        {
+          id: "11",
+          label: "FreeCodeCamp - Accessing Nested Arrays",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-nested-arrays",
+        },
+        {
+          id: "12",
+          label: "FreeCodeCamp - Record Collection",
+          type: "link",
+          url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/record-collection",
+        },
+      ],
+    }
 
 //     {
 //       id: "sort",
