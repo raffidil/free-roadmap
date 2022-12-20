@@ -71,6 +71,13 @@ const databaseCourse: Course = {
       type: "slide",
       weekNo: 8,
     },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week10",
+      type: "slide",
+      weekNo: 10,
+    },
   ],
   lessons: [
     {
@@ -363,6 +370,20 @@ const databaseCourse: Course = {
       id: "css-short",
       name: "overflow",
       weekNo: 8,
+    },
+    {
+      id: "flex",
+      name: "Flex",
+      weekNo: 10,
+      exercises: [
+        {
+          id: "free7",
+          label:
+            "Introduction to the Learn CSS Flexbox by Building a Photo Gallery Project",
+          url: "https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-flexbox-by-building-a-photo-gallery/",
+          type: "link",
+        },
+      ],
     },
   ],
 };
