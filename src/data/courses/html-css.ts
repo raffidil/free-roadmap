@@ -383,6 +383,12 @@ const databaseCourse: Course = {
           url: "https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-flexbox-by-building-a-photo-gallery/",
           type: "link",
         },
+        {
+          id: "frog",
+          label: "Flexbox Froggy",
+          url: "https://flexboxfroggy.com/",
+          type: "link",
+        },
       ],
     },
   ],
