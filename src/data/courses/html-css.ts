@@ -78,6 +78,13 @@ const databaseCourse: Course = {
       type: "slide",
       weekNo: 10,
     },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week11",
+      type: "slide",
+      weekNo: 11,
+    },
   ],
   lessons: [
     {
@@ -390,6 +397,30 @@ const databaseCourse: Course = {
           type: "link",
         },
       ],
+    },
+    {
+      id: "flex",
+      name: "Font Awesome",
+      weekNo: 11,
+      exercises: [
+        {
+          id: "frog",
+          label:
+            "Introduction to the Learn Intermediate CSS by Building a Picasso Painting Project",
+          url: "https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-intermediate-css-by-building-a-picasso-painting/",
+          type: "link",
+        },
+      ],
+    },
+    {
+      id: "position",
+      name: "Position: absolute",
+      weekNo: 11,
+    },
+    {
+      id: "zindex",
+      name: "z-index",
+      weekNo: 11,
     },
   ],
 };
