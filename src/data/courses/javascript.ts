@@ -815,7 +815,125 @@ const javascriptCourse: Course = {
           url: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/record-collection",
         },
       ],
-    }
+    },
+    {
+      id: "strings",
+      name: "Strings",
+      weekNo: 12,
+      resources: [
+        {
+          id: "1",
+          label: "w3school - JavaScript Strings",
+          type: "link",
+          url: "https://www.w3schools.com/js/js_strings.asp",
+        },
+        {
+          id: "2",
+          label: "w3school - JavaScript String Methods",
+          type: "link",
+          url: "https://www.w3schools.com/js/js_string_methods.asp",
+        },
+        {
+          id: "3",
+          label: "Programming with Mosh - JavaScript String",
+          type: "video",
+          url: "https://youtu.be/09BwruU4kiY",
+        },
+      ],
+    },
+    {
+      id: "dom-manipulation",
+      name: "DOM Manipulation",
+      weekNo: 12,
+      resources: [
+        {
+          id: "1",
+          label: "Javascript.info - Browser environment, specs",
+          type: "link",
+          url: "https://javascript.info/browser-environment",
+        },
+        {
+          id: "2",
+          label: "Javascript.info - DOM tree",
+          type: "link",
+          url: "https://javascript.info/dom-nodes",
+        },
+        {
+          id: "3",
+          label: "Javascript.info - Walking the DOM",
+          type: "link",
+          url: "https://javascript.info/dom-navigation",
+        },
+      ],
+    },
+    {
+      id: "dom-access-to-elements",
+      name: "DOM - Access to elements",
+      weekNo: 12,
+      resources: [
+        {
+          id: "1",
+          label: "Javascript.info - Searching: getElement*, querySelector*",
+          type: "link",
+          url: "https://javascript.info/searching-elements-dom",
+        },
+        {
+          id: "2",
+          label: "Javascript.info - Modifying the document",
+          type: "link",
+          url: "https://javascript.info/modifying-document",
+        },
+      ],
+    },
+    {
+      id: "dom-events",
+      name: "DDM - Events",
+      weekNo: 12,
+      resources: [
+        {
+          id: "1",
+          label: "Javascript.info - Introduction to browser events",
+          type: "link",
+          url: "https://javascript.info/introduction-browser-events",
+        },
+        {
+          id: "2",
+          label: "w3school - click event",
+          type: "link",
+          url: "https://www.w3schools.com/jsref/event_onclick.asp",
+        },
+        {
+          id: "3",
+          label: "w3school - mouse over event",
+          type: "link",
+          url: "https://www.w3schools.com/jsref/event_onmouseover.asp",
+        },
+        {
+          id: "4",
+          label: "w3school - mouse out event",
+          type: "link",
+          url: "https://www.w3schools.com/jsref/event_onmouseout.asp",
+        },
+        {
+          id: "5",
+          label: "w3school - change event",
+          type: "link",
+          url: "https://www.w3schools.com/jsref/event_onchange.asp",
+        },
+        {
+          id: "6",
+          label: "w3school - input event",
+          type: "link",
+          url: "https://www.w3schools.com/jsref/event_oninput.asp",
+        },
+        {
+          id: "7",
+          label: "w3school - key press event",
+          type: "link",
+          url: "https://www.w3schools.com/jsref/event_onkeydown.asp",
+        },
+      ],
+    },
 
 //     {
 //       id: "sort",
