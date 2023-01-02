@@ -85,6 +85,13 @@ const databaseCourse: Course = {
       type: "slide",
       weekNo: 11,
     },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week12",
+      type: "slide",
+      weekNo: 12,
+    },
   ],
   lessons: [
     {
@@ -421,6 +428,31 @@ const databaseCourse: Course = {
       id: "zindex",
       name: "z-index",
       weekNo: 11,
+    },
+    {
+      id: "media",
+      name: "Media Query",
+      weekNo: 12,
+      exercises: [
+        {
+          id: "1",
+          label: "Learn CSS Media Query In 7 Minutes",
+          url: "https://www.youtube.com/watch?v=yU7jJ3NbPdA",
+          type: "link",
+        },
+        {
+          id: "2",
+          label: "Learn CSS Media Query In 7 Minutes",
+          url: "Media Query CSS Tutorial",
+          type: "link",
+        },
+        {
+          id: "free5",
+          label: "Assignment 3",
+          url: "https://js-presentations.vercel.app/presentation/basic-frontend/week12/assignment.html",
+          type: "link",
+        },
+      ],
     },
   ],
 };
