@@ -442,8 +442,9 @@ const databaseCourse: Course = {
         },
         {
           id: "2",
-          label: "Learn CSS Media Query In 7 Minutes",
-          url: "Media Query CSS Tutorial",
+          label:
+            "Media Query CSS Example – Max and Min Screen Width for Mobile Responsive Design",
+          url: "https://www.freecodecamp.org/news/media-query-css-example-max-and-min-screen-width-for-mobile-responsive-design/",
           type: "link",
         },
         {
