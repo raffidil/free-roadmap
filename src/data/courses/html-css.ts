@@ -455,6 +455,52 @@ const databaseCourse: Course = {
         },
       ],
     },
+    {
+      id: "table",
+      name: "Table",
+      weekNo: 14,
+      exercises: [
+        {
+          id: "1",
+          label: "W3S: HTML Tables",
+          url: "https://www.w3schools.com/html/html_tables.asp",
+          type: "link",
+        },
+        {
+          id: "2",
+          label: "FCC: HTML Tables – Table Tutorial with Example Code",
+          url: "https://www.freecodecamp.org/news/html-tables-table-tutorial-with-css-example-code/",
+          type: "link",
+        },
+      ],
+    },
+    {
+      id: "animation",
+      name: "Animation",
+      weekNo: 14,
+      exercises: [
+        {
+          id: "1",
+          label:
+            "Introduction to the Learn CSS Animation by Building a Ferris Wheel Project",
+          url: "https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-animation-by-building-a-ferris-wheel/",
+          type: "link",
+        },
+      ],
+    },
+    {
+      id: "Transition",
+      name: "Transition",
+      weekNo: 14,
+      exercises: [
+        {
+          id: "1",
+          label: "Transitions",
+          url: "https://www.w3schools.com/css/css3_transitions.asp",
+          type: "link",
+        },
+      ],
+    },
   ],
 };
 
