@@ -92,6 +92,13 @@ const databaseCourse: Course = {
       type: "slide",
       weekNo: 12,
     },
+    {
+      id: "slides",
+      label: "Slides",
+      url: "https://js-presentations.vercel.app/presentation/basic-frontend/week14",
+      type: "slide",
+      weekNo: 14,
+    },
   ],
   lessons: [
     {
